@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ARK YOUTH | Empowering The Next Generation</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="ARK Youth is a digital-native movement of Apostolic believers dedicated to radical faith, authentic community, and global impact." />
+    <meta name="keywords" content="youth ministry, apostolic, faith, digital discipleship, Christian youth movement" />
+
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS with form plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background-color: #0A0A0F;
+            background-image: 
+                linear-gradient(45deg, rgba(86, 141, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(-45deg, rgba(86, 141, 255, 0.05) 1px, transparent 1px);
+            background-size: 64px 64px;
+            color: #e4e1e9;
+        }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(176, 198, 255, 0.4), transparent);
+            pointer-events: none;
+        }
+        .glass-card:hover {
+            border-color: rgba(86, 141, 255, 0.5);
+            box-shadow: 0 0 20px rgba(86, 141, 255, 0.2);
+        }
+        .neon-glow-border {
+            position: relative;
+            border: 1px solid #568dff;
+            box-shadow: 0 0 10px rgba(86, 141, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .neon-glow-border:hover {
+            box-shadow: 0 0 20px rgba(0, 244, 254, 0.6);
+            background-color: #568dff;
+            color: #001945;
+        }
+        .diagonal-accents {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.05;
+            background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 1px, transparent 100px);
+        }
+        .scanning-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f4fe, transparent);
+            position: absolute;
+            animation: scan 4s linear infinite;
+        }
+        .scanner-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f4fe, transparent);
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(86, 141, 255, 0.3);
+            border-color: rgba(86, 141, 255, 0.6);
+        }
+    </style>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#480063",
+                      "on-surface": "#e4e1e9",
+                      "inverse-surface": "#e4e1e9",
+                      "surface-dim": "#131318",
+                      "primary-container": "#568dff",
+                      "on-secondary-fixed": "#002021",
+                      "surface": "#131318",
+                      "tertiary-container": "#d05bff",
+                      "secondary-container": "#00f4fe",
+                      "surface-variant": "#35343a",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#1f1f25",
+                      "secondary-fixed": "#63f7ff",
+                      "tertiary-fixed-dim": "#ecb1ff",
+                      "on-background": "#e4e1e9",
+                      "surface-tint": "#b0c6ff",
+                      "primary-fixed": "#d9e2ff",
+                      "tertiary-fixed": "#f9d8ff",
+                      "inverse-primary": "#0058cb",
+                      "on-primary-fixed-variant": "#00429c",
+                      "on-primary-fixed": "#001945",
+                      "error-container": "#93000a",
+                      "surface-bright": "#39383e",
+                      "on-secondary": "#003739",
+                      "secondary-fixed-dim": "#00dce5",
+                      "inverse-on-surface": "#303036",
+                      "on-tertiary-fixed-variant": "#75009e",
+                      "on-tertiary": "#520070",
+                      "surface-container-high": "#2a292f",
+                      "on-error": "#690005",
+                      "on-primary-container": "#002661",
+                      "surface-container-lowest": "#0e0e13",
+                      "tertiary": "#ecb1ff",
+                      "secondary": "#e6feff",
+                      "outline-variant": "#424655",
+                      "surface-container-highest": "#35343a",
+                      "background": "#131318",
+                      "primary": "#b0c6ff",
+                      "on-secondary-container": "#006c71",
+                      "on-tertiary-fixed": "#320046",
+                      "primary-fixed-dim": "#b0c6ff",
+                      "outline": "#8c90a1",
+                      "on-secondary-fixed-variant": "#004f53",
+                      "on-primary": "#002d6f",
+                      "surface-container-low": "#1b1b20",
+                      "on-surface-variant": "#c2c6d8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Sora"],
+                      "display-lg": ["Sora"],
+                      "headline-lg-mobile": ["Sora"],
+                      "body-md": ["Hanken Grotesk"],
+                      "label-md": ["Space Mono"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "display-lg-mobile": ["Sora"],
+                      "headline-lg": ["Sora"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "fontSize-headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-x-hidden">
+    
+    <!-- Background layers -->
+    <div class="diagonal-accents transition-transform duration-300"></div>
+
+    <div id="app" class="flex-grow flex flex-col">
+        <!-- Components Injected Here Dynamically -->
+    </div>
+
+    <!-- Application Script entry point -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
