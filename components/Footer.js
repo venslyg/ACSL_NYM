@@ -13,18 +13,10 @@ export function Footer() {
           <p class="font-body-md text-body-md text-outline mb-6 max-w-sm leading-relaxed">
             The Youth Ministry of the Apostolic Church of Sri Lanka. Empowering the next generation of disciples through prayer, action, and faith.
           </p>
-          <div class="flex gap-4">
-            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
-              <span class="material-symbols-outlined text-[20px]">public</span>
-            </a>
-            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
-              <span class="material-symbols-outlined text-[20px]">alternate_email</span>
-            </a>
-          </div>
         </div>
 
         <!-- Quick Links -->
-        <div class="md:col-span-2 md:col-start-7">
+        <div class="md:col-span-3 md:col-start-7">
           <h4 class="text-secondary font-bold font-body-md mb-4 uppercase text-sm tracking-wider">Navigation</h4>
           <ul class="space-y-2">
             <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#home">Home</a></li>
@@ -33,16 +25,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div class="md:col-span-2">
-          <h4 class="text-secondary font-bold font-body-md mb-4 uppercase text-sm tracking-wider">Legal</h4>
-          <ul class="space-y-2">
-            <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
-            <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#">Terms of Service</a></li>
-            <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#">Statement of Faith</a></li>
-          </ul>
-        </div>
-
-        <div class="md:col-span-3">
+        <div class="md:col-span-3 md:col-start-10">
           <h4 class="text-secondary font-bold font-body-md mb-4 uppercase text-sm tracking-wider">Contact</h4>
           <ul class="space-y-3 font-body-md text-outline text-sm">
             <li class="flex items-center space-x-2">
