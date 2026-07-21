@@ -4,6 +4,7 @@ import { About } from '../components/About.js';
 import { UpcomingEvents, initUpcomingEvents } from '../components/UpcomingEvents.js';
 import { EventDetailModal, initEventDetailModal } from '../components/EventDetailModal.js';
 import { Footer, initFooter } from '../components/Footer.js';
+import { upcomingEvents } from './eventsData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -29,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Bind mousemove tracking for glass-card hover glow effects
   document.addEventListener('mousemove', (e) => {
-    // Subtle parallax for diagonal lines
     const overlay = document.querySelector('.diagonal-accents');
     if (overlay) {
       const x = e.clientX / window.innerWidth;
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
     }
 
-    // Glass card 3D lighting reflection
     document.querySelectorAll('.glass-card').forEach(card => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -47,57 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero Faith in Action button listener (scrolling to events or opening detailed view directly)
+  // Hero Faith in Action button listener
   const heroBtn = document.getElementById('hero-faith-btn');
   if (heroBtn) {
     heroBtn.addEventListener('click', () => {
       const eventsSection = document.getElementById('events');
       if (eventsSection) {
         eventsSection.scrollIntoView({ behavior: 'smooth' });
-        // Let's trigger opening details after brief scroll
         setTimeout(() => {
           const eventDetailEvent = new CustomEvent('open-event-detail', {
-            detail: {
-              id: "faith-in-action-camp",
-              title: "Faith in Action Camp",
-              description: "Ignite your purpose. Experience 5 days of high-octane growth, digital discipleship, and extreme worship in the heart of the mountains. Join hundreds of young leaders as we dive into what it means to live out our faith in a modern world.",
-              date: "July 15 - 20, 2024",
-              time: "Check-in: 09:00 AM",
-              location: "Summit Ridge, CO",
-              venue: "Altitude Peak Grounds",
-              category: "summit",
-              isMajor: true,
-              image: "assets/images/event-camp.jpg",
-              speakers: "Dave Cho & Friends (+ Surprise Guests)",
-              enrollLink: "https://forms.google.com/placeholder-camp-enrollment",
-              agenda: [
-                {
-                  day: "01 / ARRIVAL DAY",
-                  title: "Registration & Ignition Session",
-                  time: "09:00 - 21:00",
-                  description: "Unpack, meet your squad, and kick off the week with a high-energy evening service designed to set the pace."
-                },
-                {
-                  day: "02-04 / CORE DAYS",
-                  title: "The Deep Dive Series",
-                  time: "DAILY SCHEDULE",
-                  description: "Intensive training, Adventure Labs, Workshop Tracks, and Evening Neon Rallies.",
-                  subItems: ["Morning Intensity", "Adventure Labs", "Workshop Tracks", "Evening Neon Rally"]
-                },
-                {
-                  day: "05 / FINALE",
-                  title: "Commissioning Gala",
-                  time: "ALL DAY",
-                  description: "Celebrate the transformation. A night of awards, testimonies, and the final commissioning service."
-                }
-              ],
-              packingList: [
-                { item: "Bible & Notebook", detail: "Digital or analog acceptable." },
-                { item: "Outdoor Gear", detail: "Hiking shoes and warm layers for nights." },
-                { item: "Neon/White Clothing", detail: "For the 'Lumina' Night Rally." },
-                { item: "Tech Essentials", detail: "Portable chargers and headphones." }
-              ]
-            }
+            detail: upcomingEvents[0]
           });
           window.dispatchEvent(eventDetailEvent);
         }, 800);
@@ -125,17 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = {
       home: [document.getElementById('nav-home'), document.getElementById('mobile-nav-home')],
       about: [document.getElementById('nav-about'), document.getElementById('mobile-nav-about')],
-      events: [document.getElementById('nav-events'), document.getElementById('mobile-nav-events')],
-      faith: [document.getElementById('nav-faith'), document.getElementById('mobile-nav-faith')]
+      events: [document.getElementById('nav-events'), document.getElementById('mobile-nav-events')]
     };
-
-    // If we're looking at events section, and the user scrolls there, highlight both events and faith (since faith camp is in events)
-    const highlightedId = (currentId === 'events') ? 'events' : currentId;
 
     Object.keys(links).forEach(key => {
       links[key].forEach(el => {
         if (!el) return;
-        if (key === highlightedId) {
+        if (key === currentId) {
           el.classList.add(...activeClass);
           el.classList.remove(...inactiveClass);
         } else {

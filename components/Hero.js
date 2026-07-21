@@ -8,8 +8,8 @@ export function Hero() {
       
       <div class="relative z-20 text-center max-w-container-max px-margin-mobile md:px-margin-desktop">
         <div class="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1 mb-8 animate-pulse">
-          <span class="material-symbols-outlined text-primary text-sm">bolt</span>
-          <span class="font-label-md text-xs text-primary uppercase tracking-widest">Digital Ministry Awakening</span>
+          <span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+          <span class="font-label-md text-xs text-primary uppercase tracking-widest">Apostolic Church's Youth Spiritual Awakening</span>
         </div>
         
         <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
@@ -17,12 +17,12 @@ export function Hero() {
         </h1>
         
         <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
-          We are a movement dedicated to unlocking the spiritual potential of youth through technology, community, and authentic apostolic tradition. Join the mission to redefine the future.
+          We are a movement dedicated to unlocking the spiritual potential of youth through prayer, community, and Worship.
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
           <button id="hero-faith-btn" class="neon-glow-border px-8 py-4 rounded-full font-label-md text-primary uppercase flex items-center group bg-transparent border border-primary/50 cursor-pointer">
-            Faith in Action Event
+            Upcoming Events
             <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
           <a href="#about" class="glass-card px-8 py-4 rounded-full font-label-md text-on-surface uppercase border border-white/20 hover:bg-white/5 transition-all cursor-pointer">
