@@ -29,8 +29,52 @@ export function EventDetailModal() {
           <!-- Description & Logistics Grid -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-6">
             <!-- Left Info column -->
-            <div class="md:col-span-7">
-              <p id="modal-desc" class="font-body-lg text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6"></p>
+            <div class="md:col-span-7 space-y-6">
+              <p id="modal-desc" class="font-body-lg text-sm sm:text-base text-on-surface-variant leading-relaxed"></p>
+              
+              <!-- Payment Instructions Card -->
+              <div class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 space-y-4">
+                <div class="flex items-center gap-2 text-primary">
+                  <span class="material-symbols-outlined">payments</span>
+                  <h3 class="font-headline-md text-xs sm:text-sm font-bold uppercase tracking-widest">Payment Instructions</h3>
+                </div>
+                
+                <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  The camp fee is <span class="text-secondary font-semibold">Rs. 6,000.00</span> per participant. Please be kind enough to deposit <span class="text-primary font-semibold">Rs.1,000.00</span> At the time of registration into the “National Youth Ministry” account and upload the payment receipt below.
+                </p>
+
+                <!-- Bank Details Box -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 space-y-3">
+                  <h4 class="font-label-md text-secondary uppercase tracking-wider text-[10px]">Bank Account Details</h4>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div>
+                      <p class="text-[10px] text-outline uppercase tracking-wider">Bank Name</p>
+                      <p class="font-bold text-on-surface">Hatton National Bank</p>
+                    </div>
+                    <div>
+                      <p class="text-[10px] text-outline uppercase tracking-wider">Branch</p>
+                      <p class="font-bold text-on-surface">Moratuwa</p>
+                    </div>
+                    <div>
+                      <p class="text-[10px] text-outline uppercase tracking-wider">Account Name</p>
+                      <p class="font-bold text-on-surface">ACSL- National Youth Ministry</p>
+                    </div>
+                    <div>
+                      <p class="text-[10px] text-outline uppercase tracking-wider">Account Number</p>
+                      <p class="font-bold text-secondary text-base">022020430553</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notice -->
+                <div class="border-l-2 border-primary/40 pl-3 py-1 space-y-1.5">
+                  <p class="text-xs text-outline leading-normal">
+                    <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Notice :</strong>
+                    Please mention your first name and church name as the reference when depositing your cash. Send a copy of your deposit to the whatsapp number : <a href="https://wa.me/94760093437" target="_blank" class="text-secondary hover:underline font-bold inline-flex items-center gap-0.5">0760093437</a>.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <!-- Right Logistics column -->

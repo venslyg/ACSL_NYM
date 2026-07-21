@@ -17,7 +17,7 @@ export function Hero() {
         </h1>
         
         <p class="font-body-lg text-sm sm:text-base md:text-lg text-on-surface-variant mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
-          We are a movement dedicated to unlocking the spiritual potential of youth through prayer, community, and Worship.
+          We are a movement dedicated to unlock the spiritual potential of youth through prayer, community, and Worship.
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md mx-auto sm:max-w-none">

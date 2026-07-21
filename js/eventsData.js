@@ -1,7 +1,7 @@
 export const upcomingEvents = [
   {
     id: "faith-in-action-camp",
-    title: "Faith in Action Camp 2026",
+    title: "Faith in Action National Youth Camp 2026",
     description: "The National Youth Camp of the Apostolic Church of Sri Lanka. Ignite your purpose in 4 days of powerful worship, spiritual empowerment, and authentic fellowship with youth from across Sri Lanka.",
     date: "August 26 - 29, 2026",
     time: "4 Days / 3 Nights",
@@ -55,7 +55,7 @@ export const pastEvents = [
   },
   {
     id: "jaffna-regional-camp",
-    title: "Jaffna Regional Camp",
+    title: "Go in the STRENTH you have",
     description: "A transformative regional gathering bringing together the youth of the Northern province for intense worship and unity.",
     date: "2026",
     location: "Jaffna, Sri Lanka",

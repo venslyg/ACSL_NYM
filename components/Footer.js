@@ -46,18 +46,14 @@ export function Footer() {
           <h4 class="text-secondary font-bold font-body-md mb-4 uppercase text-sm tracking-wider">Contact</h4>
           <ul class="space-y-3 font-body-md text-outline text-sm">
             <li class="flex items-center space-x-2">
-              <span class="material-symbols-outlined text-primary text-sm">location_on</span>
-              <span>"Ape Kedella", Madampe, Sri Lanka</span>
-            </li>
-            <li class="flex items-center space-x-2">
               <span class="material-symbols-outlined text-primary text-sm">mail</span>
-              <span>contact@acslnym.org</span>
+              <span>acslnym2026@gmail.com</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col items-center justify-center gap-4 text-center">
         <p class="font-label-md text-label-md text-outline text-xs">© 2026 ACSL National Youth Ministry. All rights reserved.</p>
         <div class="flex gap-6">
           <a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">church</span></a>
