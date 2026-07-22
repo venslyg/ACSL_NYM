@@ -26,7 +26,7 @@ export function About() {
             </div>
             <h3 class="font-headline-lg text-2xl md:text-3xl mb-4 text-secondary">Our Vision</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              To see a globally connected generation of young people activated in their divine purpose, operating with spiritual authority and kingdom excellence to redefine what it means to be a modern disciple.
+              To empower and equip youth leaders across Sri Lanka, fostering spiritual growth, leadership skills, and community service, while creating dynamic teams to support the national youth ministry's mission.
             </p>
           </div>
           <div class="absolute bottom-[-15%] right-[-5%] opacity-5 group-hover:opacity-10 transition-opacity duration-500">
@@ -43,7 +43,7 @@ export function About() {
             </div>
             <h3 class="font-headline-lg text-2xl md:text-3xl mb-4 text-tertiary">Our Mission</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Equipping youth through high-energy worship, deep doctrinal study, and hands-on ministry to carry the message of Jesus Christ into every corner of Sri Lanka and beyond.
+              To strengthen local church leadership and expand the reach of the national youth ministry by cultivating a culture of prayer, enhancing biblical knowledge, empowering a spirit of service, and mobilizing specialized support teams across Sri Lanka.
             </p>
           </div>
           <div class="absolute bottom-[-15%] right-[-5%] opacity-5 group-hover:opacity-10 transition-opacity duration-500">
