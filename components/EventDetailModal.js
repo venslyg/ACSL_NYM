@@ -2,12 +2,12 @@ export function EventDetailModal() {
   return `
     <div id="event-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-background/80 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 md:p-10 transition-all duration-300">
       <!-- Modal Box -->
-      <div class="relative w-full max-w-4xl bg-surface border border-white/10 rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+      <div class="relative w-full max-w-4xl glass-card bg-surface-container/70 backdrop-blur-2xl border border-white/15 rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
         
         <!-- Header Image & Close -->
         <div class="relative h-[200px] sm:h-[260px] md:h-[320px] overflow-hidden flex-shrink-0">
           <img id="modal-image" class="w-full h-full object-cover" src=""/>
-          <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container/95 via-surface-container/40 to-transparent"></div>
           
           <!-- Close Button -->
           <button id="modal-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-surface-container/70 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-surface-container transition-all cursor-pointer text-primary z-20">
@@ -132,7 +132,7 @@ export function EventDetailModal() {
         </div>
 
         <!-- Footer Action -->
-        <div class="bg-surface-container-low border-t border-white/10 px-5 sm:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 flex-shrink-0">
+        <div class="bg-surface-container-low/60 backdrop-blur-md border-t border-white/10 px-5 sm:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 flex-shrink-0">
           <div class="text-center sm:text-left">
             <p class="text-[10px] sm:text-xs text-outline font-label-md uppercase tracking-widest">Apostolic Church of Sri Lanka</p>
             <p class="text-xs sm:text-sm font-body-md text-on-surface-variant">Secure your delegate registration today via Google Forms.</p>

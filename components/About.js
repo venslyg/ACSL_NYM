@@ -345,7 +345,7 @@ export function About() {
       </div>
 
       <!-- Introduction to the Apostolic Church of Sri Lanka -->
-      <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border border-primary/30 bg-surface-container-lowest/50">
+      <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl">
         <div class="flex items-center gap-4 mb-6">
           <div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center">
             <span class="material-symbols-outlined text-primary text-3xl">church</span>
