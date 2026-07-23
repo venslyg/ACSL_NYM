@@ -40,7 +40,7 @@ export function EventDetailModal() {
                 </div>
                 
                 <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  The camp fee is <span class="text-secondary font-semibold">Rs. 6,000.00</span> per participant. Please be kind enough to deposit <span class="text-primary font-semibold">Rs.1,000.00</span> At the time of registration into the “National Youth Ministry” account and upload the payment receipt below.
+                  The camp fee is <span class="text-secondary font-semibold">Rs. 6,000.00</span> per participant. Please be kind enough to deposit <span class="text-primary font-semibold">Rs. 2,000.00</span> At the time of registration into the “National Youth Ministry” account and upload the payment receipt below.
                 </p>
 
                 <!-- Bank Details Box -->
@@ -49,30 +49,44 @@ export function EventDetailModal() {
                   
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
                     <div>
-                      <p class="text-[10px] text-outline uppercase tracking-wider">Bank Name</p>
+                      <p class="text-[10px] text-outline tracking-wider">Bank Name</p>
                       <p class="font-bold text-on-surface">Hatton National Bank</p>
                     </div>
                     <div>
-                      <p class="text-[10px] text-outline uppercase tracking-wider">Branch</p>
+                      <p class="text-[10px] text-outline tracking-wider">Branch</p>
                       <p class="font-bold text-on-surface">Moratuwa</p>
                     </div>
                     <div>
-                      <p class="text-[10px] text-outline uppercase tracking-wider">Account Name</p>
+                      <p class="text-[10px] text-outline tracking-wider">Account Name</p>
                       <p class="font-bold text-on-surface">ACSL- National Youth Ministry</p>
                     </div>
                     <div>
-                      <p class="text-[10px] text-outline uppercase tracking-wider">Account Number</p>
+                      <p class="text-[10px] text-outline tracking-wider">Account Number</p>
                       <p class="font-bold text-secondary text-base">022020430553</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Notice -->
-                <div class="border-l-2 border-primary/40 pl-3 py-1 space-y-1.5">
+                <div class="border-l-2 border-primary/40 pl-3 py-1 space-y-2">
                   <p class="text-xs text-outline leading-normal">
-                    <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Notice :</strong>
-                    Please mention your first name and church name as the reference when depositing your cash. Send a copy of your deposit to the whatsapp number : <a href="https://wa.me/94760093437" target="_blank" class="text-secondary hover:underline font-bold inline-flex items-center gap-0.5">0760093437</a>.
+                     <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Notice :</strong>
+                    Please mention your first name and the church name as the reference when depositing your cash and kindly share a copy of your deposit to the below mentioned Whatsapp numbers according to the region you are enrolled:
                   </p>
+                  <ul class="text-xs text-outline space-y-1.5 pl-2 list-none">
+                    <li class="flex items-center justify-between gap-2 border-b border-white/5 pb-1">
+                      <span class="font-medium text-on-surface-variant">Colombo Region:</span>
+                      <a href="https://wa.me/94771835381" target="_blank" class="text-secondary hover:underline font-bold">+94 77 183 5381</a>
+                    </li>
+                    <li class="flex items-center justify-between gap-2 border-b border-white/5 pb-1">
+                      <span class="font-medium text-on-surface-variant">Jaffna Region:</span>
+                      <a href="https://wa.me/94766458021" target="_blank" class="text-secondary hover:underline font-bold">+94 76 645 8021</a>
+                    </li>
+                    <li class="flex items-center justify-between gap-2">
+                      <span class="font-medium text-on-surface-variant">Wennappuwa Region:</span>
+                      <a href="https://wa.me/94767320496" target="_blank" class="text-secondary hover:underline font-bold">+94 76 732 0496</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
