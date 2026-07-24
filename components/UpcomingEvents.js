@@ -24,6 +24,8 @@ export function UpcomingEvents() {
             <div class="relative overflow-hidden h-[260px] sm:h-[350px] lg:h-full w-full">
               <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="${majorEvent.image}"/>
               <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+              
+              <!-- Badges (Top Left) -->
               <div class="absolute top-4 left-4 sm:top-8 sm:left-8 flex flex-col gap-2 z-10">
                 <span class="bg-primary text-on-primary px-3 sm:px-4 py-1.5 rounded-full font-label-md text-[10px] sm:text-xs uppercase tracking-tighter flex items-center gap-1.5 w-max">
                   <span class="material-symbols-outlined text-[14px] sm:text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -33,13 +35,14 @@ export function UpcomingEvents() {
                   ${majorEvent.fee}
                 </span>
               </div>
+
+              <!-- Official Event Logo (Top Right) -->
+              <div class="absolute top-4 right-4 sm:top-8 sm:right-8 z-10">
+                <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="h-10 sm:h-16 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"/>
+              </div>
             </div>
             
             <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
-              <div class="mb-5">
-                <img src="assets/event logo.png" alt="Faith in Action Logo" class="h-14 sm:h-20 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(86,141,255,0.3)]"/>
-              </div>
-              
               <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                 <span class="text-secondary-fixed-dim material-symbols-outlined text-sm sm:text-base">calendar_month</span>
                 <span class="font-label-md text-xs sm:text-sm text-secondary-fixed-dim uppercase tracking-wider">${majorEvent.date}</span>
