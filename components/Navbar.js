@@ -2,10 +2,12 @@ export function Navbar() {
   return `
     <nav class="fixed top-0 w-full bg-surface/40 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(86,141,255,0.2)] z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300">
       <!-- Logo & Title -->
-      <div class="flex items-center gap-3 font-headline-md text-lg md:text-xl font-extrabold tracking-tighter text-primary cursor-pointer select-none">
+      <div class="flex items-center gap-2.5 font-headline-md text-lg md:text-xl font-extrabold tracking-tighter text-primary cursor-pointer select-none">
+        <img src="assets/images/ACSL logo.jpg" alt="ACSL Main Logo" class="h-8 md:h-10 w-auto object-contain rounded-full border border-white/10 shadow-lg"/>
+        <div class="h-6 w-px bg-white/20"></div>
         <img src="assets/images/final logo.png" alt="ACSL Logo" class="h-9 md:h-11 w-auto object-contain"/>
-        <span class="hidden sm:inline">ACSL National Youth Ministry</span>
-        <span class="sm:hidden">ACSL NYM</span>
+        <!-- <span class="hidden sm:inline">ACSL National Youth Ministry</span> -->
+        <!-- <span class="sm:hidden">ACSL NYM</span> -->
       </div>
       
       <!-- Centered Desktop Navigation -->

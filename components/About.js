@@ -345,9 +345,7 @@ export function About() {
       <!-- Introduction to the Apostolic Church of Sri Lanka -->
       <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl">
         <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <span class="material-symbols-outlined text-primary text-3xl">church</span>
-          </div>
+          <img src="assets/images/ACSL logo.jpg" alt="ACSL Logo" class="w-12 h-12 object-contain rounded-xl border border-primary/30 shadow-lg"/>
           <div>
             <span class="font-label-md text-xs text-primary uppercase tracking-widest">National Church Movement</span>
             <h3 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold">The Apostolic Church of Sri Lanka</h3>
