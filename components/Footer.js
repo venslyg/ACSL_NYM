@@ -21,7 +21,7 @@ export function Footer() {
           <ul class="space-y-2">
             <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#home">Home</a></li>
             <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#about">About Us</a></li>
-            <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#events">Upcoming Camp</a></li>
+            <li><a class="font-body-md text-body-md text-outline hover:text-on-surface transition-colors" href="#events">Upcoming Events</a></li>
           </ul>
         </div>
 

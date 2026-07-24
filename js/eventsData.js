@@ -46,7 +46,7 @@ export const upcomingEvents = [
 export const pastEvents = [
   {
     id: "colombo-regional-camp",
-    title: "Rapha – Colombo Regional Camp",
+    title: "RAPHA – Colombo Regional Camp",
     description: "The 2026 Colombo regional youth camp centered on divine restoration, spiritual healing, and empowering the urban youth.",
     date: "2026",
     location: "Colombo, Sri Lanka",
@@ -55,7 +55,7 @@ export const pastEvents = [
   },
   {
     id: "jaffna-regional-camp",
-    title: "Go in the STRENTH you have",
+    title: "GO IN THE 'STRENGTH' YOU HAVE - Jaffna Regional Camp",
     description: "A transformative regional gathering bringing together the youth of the Northern province for intense worship and unity.",
     date: "2026",
     location: "Jaffna, Sri Lanka",
@@ -64,7 +64,7 @@ export const pastEvents = [
   },
   {
     id: "wennappuwa-regional-camp",
-    title: "Arise and Possess – Wennappuwa Regional Camp",
+    title: "ARISE AND POSSESS  Wennappuwa Regional Camp",
     description: "A high-octane regional camp activating the youth of Wennappuwa to arise in faith and possess their spiritual inheritance.",
     date: "2026",
     location: "Wennappuwa, Sri Lanka",
