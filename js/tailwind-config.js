@@ -69,7 +69,7 @@ tailwind.config = {
               "display-lg": ["Anton", "Sora"],
               "headline-lg-mobile": ["Anton", "Sora"],
               "body-md": ["Hanken Grotesk"],
-              "label-md": ["Space Mono"],
+              "label-md": ["Montserrat", "sans-serif"],
               "body-lg": ["Hanken Grotesk"],
               "display-lg-mobile": ["Anton", "Sora"],
               "headline-lg": ["Anton", "Sora"]
@@ -79,7 +79,7 @@ tailwind.config = {
               "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400"}],
               "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0.01em", "fontWeight": "400"}],
               "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-              "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+              "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
               "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
               "fontSize-headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "0.01em", "fontWeight": "400"}]
       }
