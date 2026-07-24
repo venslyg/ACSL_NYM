@@ -9,6 +9,11 @@ export function EventDetailModal() {
           <img id="modal-image" class="w-full h-full object-cover" src=""/>
           <div class="absolute inset-0 bg-gradient-to-t from-surface-container/95 via-surface-container/40 to-transparent"></div>
           
+          <!-- Official Event Logo -->
+          <div class="absolute inset-0 flex items-center justify-center z-10 p-6 pointer-events-none">
+            <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-20 sm:h-28 md:h-36 object-contain opacity-80 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"/>
+          </div>
+          
           <!-- Close Button -->
           <button id="modal-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-surface-container/70 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-surface-container transition-all cursor-pointer text-primary z-20">
             <span class="material-symbols-outlined text-xl sm:text-2xl">close</span>
@@ -29,11 +34,11 @@ export function EventDetailModal() {
           <!-- Description & Logistics Grid -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-6">
             <!-- Left Info column -->
-            <div class="md:col-span-7 space-y-6">
+            <div class="md:col-span-7 md:flex md:flex-col space-y-6">
               <p id="modal-desc" class="font-body-lg text-sm sm:text-base text-on-surface-variant leading-relaxed"></p>
               
               <!-- Payment Instructions Card -->
-              <div class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 space-y-4">
+              <div class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 space-y-4 md:flex-grow">
                 <div class="flex items-center gap-2 text-primary">
                   <span class="material-symbols-outlined">payments</span>
                   <h3 class="font-headline-md text-xs sm:text-sm font-bold uppercase tracking-widest">Payment Instructions</h3>
@@ -79,7 +84,7 @@ export function EventDetailModal() {
             </div>
 
             <!-- Right Logistics column -->
-            <div class="md:col-span-5 space-y-6">
+            <div class="md:col-span-5 md:flex md:flex-col space-y-6">
               <!-- Logistics Card -->
               <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4 border-white/10">
                 <h4 class="font-label-md text-secondary uppercase tracking-widest text-xs">Camp Details</h4>
@@ -118,7 +123,7 @@ export function EventDetailModal() {
               </div>
 
               <!-- Packing list -->
-              <div id="modal-major-packing" class="glass-card p-5 sm:p-6 rounded-2xl border-white/10">
+              <div id="modal-major-packing" class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 md:flex-grow">
                 <h3 class="font-headline-md text-xs sm:text-sm text-primary mb-4 flex items-center gap-2 uppercase tracking-widest font-bold">
                   <span class="material-symbols-outlined text-base">inventory_2</span>
                   WHAT TO BRING
