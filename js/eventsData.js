@@ -11,7 +11,7 @@ export const upcomingEvents = [
     category: "summit",
     isMajor: true,
     image: "assets/images/event-camp.jpg",
-    speakers: "National Youth Ministry Leaders & Guest Speakers",
+    speakers: "National Youth Ministry of The Apostolic Church of Sri Lanka",
     enrollLink: "https://forms.gle/WJnq1x1UpzVyCNwH7",
     agenda: [
       {

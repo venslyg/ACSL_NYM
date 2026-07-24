@@ -96,6 +96,14 @@
             box-shadow: 0 0 20px rgba(86, 141, 255, 0.3);
             border-color: rgba(86, 141, 255, 0.6);
         }
+        /* Hide scrollbars but keep scrolling functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none !important;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
     </style>
 
     <script id="tailwind-config">

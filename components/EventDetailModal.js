@@ -1,6 +1,6 @@
 export function EventDetailModal() {
   return `
-    <div id="event-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-background/80 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 md:p-10 transition-all duration-300">
+    <div id="event-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto no-scrollbar bg-background/80 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 md:p-10 transition-all duration-300">
       <!-- Modal Box -->
       <div class="relative w-full max-w-4xl glass-card bg-surface-container/70 backdrop-blur-2xl border border-white/15 rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
         
@@ -25,7 +25,7 @@ export function EventDetailModal() {
         </div>
 
         <!-- Scrollable content area -->
-        <div class="overflow-y-auto p-5 sm:p-8 md:p-10 flex-grow">
+        <div class="overflow-y-auto no-scrollbar p-5 sm:p-8 md:p-10 flex-grow">
           <!-- Description & Logistics Grid -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-6">
             <!-- Left Info column -->
@@ -186,7 +186,7 @@ export function initEventDetailModal() {
     desc.innerText = event.description;
     date.innerText = event.date;
     location.innerText = event.venue || event.location;
-    speakers.innerText = event.speakers || "National Youth Ministry Team";
+    speakers.innerText = event.speakers || "National Youth Ministry";
     currentEventLink = event.enrollLink || "https://forms.gle/WJnq1x1UpzVyCNwH7";
 
     // Inject Packing List
