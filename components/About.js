@@ -177,7 +177,7 @@ export function About() {
             </div>
             <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">menu_book</span>
-              <span class="text-xs font-medium">Disciple Ministry</span>
+              <span class="text-xs font-medium">Discipleship Ministry</span>
             </div>
           </div>
         </div>
