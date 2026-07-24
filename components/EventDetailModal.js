@@ -40,7 +40,7 @@ export function EventDetailModal() {
                 </div>
                 
                 <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  The camp fee is <span class="text-secondary font-semibold">Rs. 6,000.00</span> per participant. Please be kind enough to deposit <span class="text-primary font-semibold">Rs. 2,000.00</span> At the time of registration into the “National Youth Ministry” account and upload the payment receipt below.
+                  The camp fee is <span class="text-secondary font-semibold">Rs. 6,000.00</span> per participant. Please be kind enough to deposit <span class="text-primary font-semibold">Rs. 2,000.00</span> At the time of registration into the “National Youth Ministry” account and upload the payment receipt to the google form.
                 </p>
 
                 <!-- Bank Details Box -->
@@ -67,7 +67,7 @@ export function EventDetailModal() {
                   </div>
                 </div>
 
-                <!-- Notice -->
+                <!-- Notice
                 <div class="border-l-2 border-primary/40 pl-3 py-1 space-y-2">
                   <p class="text-xs text-outline leading-normal">
                      <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Notice :</strong>
@@ -88,6 +88,7 @@ export function EventDetailModal() {
                     </li>
                   </ul>
                 </div>
+                -->
               </div>
             </div>
 

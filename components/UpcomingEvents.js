@@ -36,6 +36,10 @@ export function UpcomingEvents() {
             </div>
             
             <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+              <div class="mb-5">
+                <img src="assets/event logo.png" alt="Faith in Action Logo" class="h-14 sm:h-20 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(86,141,255,0.3)]"/>
+              </div>
+              
               <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                 <span class="text-secondary-fixed-dim material-symbols-outlined text-sm sm:text-base">calendar_month</span>
                 <span class="font-label-md text-xs sm:text-sm text-secondary-fixed-dim uppercase tracking-wider">${majorEvent.date}</span>
@@ -50,9 +54,15 @@ export function UpcomingEvents() {
                 <span class="font-label-md text-xs uppercase tracking-wider">${majorEvent.venue}</span>
               </div>
 
-              <p class="font-body-md text-xs sm:text-base text-on-surface-variant mb-6 sm:mb-8 max-w-xl leading-relaxed">
+              <p class="font-body-md text-xs sm:text-base text-on-surface-variant mb-5 max-w-xl leading-relaxed">
                 ${majorEvent.description}
               </p>
+              
+              <!-- Bible Verse Callout -->
+              <div class="border-l-2 border-primary/40 pl-4 py-1.5 mb-6 italic text-xs sm:text-sm text-outline max-w-xl">
+                "Very truly I tell you, whoever believes in me will do the works I have been doing, and they will do even greater things than these, because I am going to the Father."
+                <span class="block mt-1 font-bold text-secondary font-label-md not-italic text-[10px] sm:text-xs uppercase tracking-wider">- John 14:12</span>
+              </div>
               
               <!-- Countdown Timer -->
               <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8 max-w-md">

@@ -5,8 +5,8 @@ export const upcomingEvents = [
     description: "The National Youth Camp of the Apostolic Church of Sri Lanka. Ignite your purpose in 4 days of powerful worship, spiritual empowerment, and authentic fellowship with youth from across Sri Lanka.",
     date: "August 26 - 29, 2026",
     time: "4 Days / 3 Nights",
-    location: '"Ape Kedella", Madampe',
-    venue: '"Ape Kedella", Madampe, Sri Lanka',
+    location: '"Ape kadella", Madampe',
+    venue: '"Ape kadella", Madampe, Sri Lanka',
     fee: "LKR 6,000 per person",
     category: "summit",
     isMajor: true,
@@ -18,7 +18,7 @@ export const upcomingEvents = [
         day: "AUG 26 / DAY 01",
         title: "Registration & Opening Ignition",
         time: "Arrival & Evening Service",
-        description: "Arrival at Ape Kedella, Madampe. Unpack, connect with delegates, and kick off the national camp with high-energy worship."
+        description: "Arrival at Ape kadella, Madampe. Unpack, connect with delegates, and kick off the national camp with high-energy worship."
       },
       {
         day: "AUG 27-28 / DAYS 02-03",
