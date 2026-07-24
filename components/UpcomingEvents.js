@@ -36,9 +36,9 @@ export function UpcomingEvents() {
                 </span>
               </div>
 
-              <!-- Official Event Logo (Top Right) -->
-              <div class="absolute top-4 right-4 sm:top-8 sm:right-8 z-10">
-                <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="h-10 sm:h-16 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"/>
+              <!-- Official Event Logo (Centered, Softened & Enlarged) -->
+              <div class="absolute inset-0 flex items-center justify-center z-10 p-6 pointer-events-none">
+                <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-24 sm:h-36 md:h-48 object-contain opacity-80 group-hover:opacity-100 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)] transform group-hover:scale-105 transition-all duration-500"/>
               </div>
             </div>
             

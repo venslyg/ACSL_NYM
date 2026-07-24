@@ -28,6 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventDetailModal();
   initFooter();
 
+  // Scroll reveal zoom effect for cards
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.08
+  };
+
+  const cardObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.scroll-zoom-card').forEach(card => {
+    cardObserver.observe(card);
+  });
+
   // Bind mousemove tracking for glass-card hover glow effects
   document.addEventListener('mousemove', (e) => {
     const overlay = document.querySelector('.diagonal-accents');
