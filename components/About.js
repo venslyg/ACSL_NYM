@@ -3,7 +3,7 @@ export function About() {
     <section id="about" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative overflow-hidden scroll-mt-20">
       
       <!-- Section Header -->
-      <div class="mb-12">
+      <div class="scroll-zoom-card mb-12">
         <div class="relative inline-block mb-4">
           <span class="font-label-md text-secondary tracking-[0.2em] uppercase">Who We Are</span>
           <div class="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-secondary to-transparent"></div>

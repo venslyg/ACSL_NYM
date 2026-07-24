@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.08
+    threshold: 0.2
   };
 
   const cardObserver = new IntersectionObserver((entries, observer) => {

@@ -8,7 +8,7 @@ export function UpcomingEvents() {
       <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         
         <!-- Header -->
-        <div class="mb-10 sm:mb-16">
+        <div class="scroll-zoom-card mb-10 sm:mb-16">
           <div class="relative inline-block mb-3 sm:mb-4">
             <span class="font-label-md text-secondary tracking-[0.2em] uppercase text-xs sm:text-sm">National Gathering</span>
             <div class="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-secondary to-transparent"></div>
