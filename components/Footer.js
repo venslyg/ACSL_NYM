@@ -38,6 +38,12 @@ export function Footer() {
               </svg>
               <a href="https://www.facebook.com/share/1EYFsnfFkN/" target="_blank" class="hover:text-primary transition-colors">ACSL Youth Ministry</a>
             </li>
+            <li class="flex items-center space-x-2">
+              <svg class="w-4 h-4 fill-current text-primary" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5zm9.75 1.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 6.25A5.75 5.75 0 1 1 6.25 12 5.76 5.76 0 0 1 12 6.25zm0 1.5A4.25 4.25 0 1 0 16.25 12 4.25 4.25 0 0 0 12 7.75zm0 1.5A2.75 2.75 0 1 1 9.25 12 2.75 2.75 0 0 1 12 9.25z"/>
+              </svg>
+              <a href="https://www.instagram.com/nym.acsl?igsh=MTd4c3Joa2dhNXAxYQ%3D%3D&utm_source=qr" target="_blank" class="hover:text-primary transition-colors">NYM ACSL</a>
+            </li>
           </ul>
         </div>
       </div>
