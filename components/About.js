@@ -203,11 +203,10 @@ export function About() {
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-secondary tracking-tight">2024</span>
-                    <span class="bg-secondary/10 border border-secondary/20 text-secondary text-[10px] px-2.5 py-0.5 rounded-full font-label-md uppercase tracking-wider">Empower</span>
                   </div>
                   <span class="text-xs text-outline font-label-md">Completed</span>
                 </div>
-                <h4 class="text-base font-bold text-white mb-2">Leadership Empowering Camp</h4>
+                <h4 class="text-lg font-black text-secondary mb-2 uppercase tracking-wide">EMPOWER-2024</h4>
                 <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   A foundational gathering dedicated to empowering and equipping the next generation of youth leaders across ACSL churches to step into their divine calling.
                 </p>
@@ -224,11 +223,10 @@ export function About() {
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-secondary tracking-tight">2025</span>
-                    <span class="bg-secondary/10 border border-secondary/20 text-secondary text-[10px] px-2.5 py-0.5 rounded-full font-label-md uppercase tracking-wider">Level Up</span>
                   </div>
                   <span class="text-xs text-outline font-label-md">Completed</span>
                 </div>
-                <h4 class="text-base font-bold text-white mb-2">Regional Youth Activation</h4>
+                <h4 class="text-lg font-black text-secondary mb-2 uppercase tracking-wide">LEVEL UP 2025</h4>
                 <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                   <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed max-w-xl">
                     More than <strong class="text-white">250+ young people</strong> united in faith to experience the real spiritual transformation promised in <strong class="text-primary font-bold">Romans 12:2</strong>.
@@ -254,12 +252,11 @@ export function About() {
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-4 relative z-10">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-primary tracking-tight">2026</span>
-                    <span class="bg-primary/20 border border-primary/30 text-primary text-[10px] px-2.5 py-0.5 rounded-full font-label-md uppercase tracking-wider font-bold">Build</span>
                   </div>
                   <span class="bg-primary text-on-primary text-[9px] px-2.5 py-0.5 rounded-full font-label-md uppercase tracking-widest font-black">Active Phase</span>
                 </div>
 
-                <h4 class="text-base sm:text-lg font-bold text-white mb-4 relative z-10">Regional Alignment & National Summit</h4>
+               <!-- <h4 class="text-lg sm:text-xl font-black text-primary mb-4 relative z-10 uppercase tracking-wide">BUILD - 2026</h4> -->
                 <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mb-6">
                   Strengthening local leadership and aligning the regions through structured camps and intensive national youth preparations.
                 </p>
@@ -324,11 +321,10 @@ export function About() {
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-outline tracking-tight">2027 - 2030</span>
-                    <span class="bg-white/5 border border-white/10 text-outline text-[10px] px-2.5 py-0.5 rounded-full font-label-md uppercase tracking-wider">Impact</span>
                   </div>
                   <span class="text-xs text-primary font-label-md uppercase tracking-wider">Destination</span>
                 </div>
-                <h4 class="text-base font-bold text-white mb-2">Strong National Youth Movement</h4>
+                <h4 class="text-lg font-black text-outline mb-2 uppercase tracking-wide">IMPACT - 2027-2030</h4>
                 <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   Fully mobilizing specialized support teams nationwide, establishing self-sustaining local church leadership structures, and impacting communities across Sri Lanka.
                 </p>
