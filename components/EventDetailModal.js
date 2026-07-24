@@ -67,28 +67,14 @@ export function EventDetailModal() {
                   </div>
                 </div>
 
-                <!-- Notice
-                <div class="border-l-2 border-primary/40 pl-3 py-1 space-y-2">
+                <!-- Special Note -->
+                <div class="border-l-2 border-primary/40 pl-3 py-1">
                   <p class="text-xs text-outline leading-normal">
-                     <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Notice :</strong>
-                    Please mention your first name and the church name as the reference when depositing your cash and kindly share a copy of your deposit to the below mentioned Whatsapp numbers according to the region you are enrolled:
+                    <strong class="text-primary uppercase tracking-wider text-[10px] block mb-0.5">Note:</strong>
+                    please send the deposit slip to the given whatsapp number with a message of your name, church name and NIC (optional) <br>
+                    Whatsapp Number : <a href="https://wa.me/94760093437" target="_blank" class="text-secondary hover:underline font-bold">0760093437</a>
                   </p>
-                  <ul class="text-xs text-outline space-y-1.5 pl-2 list-none">
-                    <li class="flex items-center justify-between gap-2 border-b border-white/5 pb-1">
-                      <span class="font-medium text-on-surface-variant">Colombo Region:</span>
-                      <a href="https://wa.me/94771835381" target="_blank" class="text-secondary hover:underline font-bold">+94 77 183 5381</a>
-                    </li>
-                    <li class="flex items-center justify-between gap-2 border-b border-white/5 pb-1">
-                      <span class="font-medium text-on-surface-variant">Jaffna Region:</span>
-                      <a href="https://wa.me/94766458021" target="_blank" class="text-secondary hover:underline font-bold">+94 76 645 8021</a>
-                    </li>
-                    <li class="flex items-center justify-between gap-2">
-                      <span class="font-medium text-on-surface-variant">Wennappuwa Region:</span>
-                      <a href="https://wa.me/94767320496" target="_blank" class="text-secondary hover:underline font-bold">+94 76 732 0496</a>
-                    </li>
-                  </ul>
                 </div>
-                -->
               </div>
             </div>
 
@@ -181,7 +167,13 @@ export function initEventDetailModal() {
     const event = e.detail;
     if (!event) return;
 
-    img.src = event.image;
+    if (event.modalImage) {
+      img.src = event.modalImage;
+      img.className = "w-full h-full object-contain p-4 bg-surface-container-low";
+    } else {
+      img.src = event.image;
+      img.className = "w-full h-full object-cover";
+    }
     title.innerText = event.title;
     desc.innerText = event.description;
     date.innerText = event.date;
@@ -212,7 +204,7 @@ export function initEventDetailModal() {
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  
+
   if (modal) {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
