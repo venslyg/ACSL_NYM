@@ -19,7 +19,7 @@ export function UpcomingEvents() {
 
         <!-- Featured Major Event Camp Card -->
         <div id="major-event-container" class="mb-16 sm:mb-24 relative">
-          <div class="glass-card rounded-2xl sm:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden min-h-[500px] group border-primary/30 shadow-2xl">
+          <div class="glass-card scroll-zoom-card rounded-2xl sm:rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden min-h-[500px] group border-primary/30 shadow-2xl">
             
             <div class="relative overflow-hidden h-[260px] sm:h-[350px] lg:h-full w-full">
               <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="${majorEvent.image}"/>
@@ -115,7 +115,7 @@ export function UpcomingEvents() {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             ${pastEvents.map(event => `
-              <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col group transition-all duration-300 border-white/10">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-5 sm:p-6 flex flex-col group transition-all duration-300 border-white/10">
                 <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
                   <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg">

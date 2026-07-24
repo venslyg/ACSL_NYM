@@ -18,8 +18,7 @@ export function About() {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         
         <!-- Vision Card -->
-        <div class="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
-          <div class="scanner-line absolute top-0 left-0 w-full opacity-20"></div>
+        <div class="glass-card scroll-zoom-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
           <div class="relative z-10">
             <div class="w-14 h-14 rounded-xl bg-secondary-container/10 border border-secondary-container/30 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
@@ -35,8 +34,7 @@ export function About() {
         </div>
 
         <!-- Mission Card -->
-        <div class="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
-          <div class="scanner-line absolute top-0 left-0 w-full opacity-20" style="animation-delay: 1s;"></div>
+        <div class="glass-card scroll-zoom-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
           <div class="relative z-10">
             <div class="w-14 h-14 rounded-xl bg-tertiary/10 border border-tertiary/30 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
@@ -70,7 +68,7 @@ export function About() {
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           
           <!-- Column 1: Where We Are Heading (Goals) -->
-          <div class="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border-white/10">
+          <div class="lg:col-span-6 glass-card scroll-zoom-card rounded-2xl p-6 sm:p-8 border-white/10">
             <h3 class="font-headline-md text-xl text-primary font-bold mb-6 flex items-center gap-2">
               <span class="material-symbols-outlined">explore</span>
               Where We Are Heading
@@ -100,7 +98,7 @@ export function About() {
           </div>
 
           <!-- Column 2: Areas & Teams -->
-          <div class="lg:col-span-6 glass-card rounded-2xl p-6 sm:p-8 border-white/10 flex flex-col justify-between">
+          <div class="lg:col-span-6 glass-card scroll-zoom-card rounded-2xl p-6 sm:p-8 border-white/10 flex flex-col justify-between">
             <div>
               <h3 class="font-headline-md text-xl text-primary font-bold mb-6 flex items-center gap-2">
                 <span class="material-symbols-outlined">groups</span>
@@ -135,7 +133,7 @@ export function About() {
         </div>
 
         <!-- National Youth Teams (To Be Built) -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 border-white/10 mb-12">
+        <div class="glass-card scroll-zoom-card rounded-2xl p-6 sm:p-8 border-white/10 mb-12">
           <h3 class="font-headline-md text-xl text-primary font-bold mb-6 flex items-center gap-2">
             <span class="material-symbols-outlined">hub</span>
             National Youth Teams (To Be Built)
@@ -203,7 +201,7 @@ export function About() {
               <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-secondary text-base">check</span>
               </div>
-              <div class="glass-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-secondary tracking-tight">2024</span>
@@ -223,7 +221,7 @@ export function About() {
               <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-secondary text-base">groups</span>
               </div>
-              <div class="glass-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-secondary tracking-tight">2025</span>
@@ -250,7 +248,7 @@ export function About() {
                 <span class="material-symbols-outlined text-white text-base">navigation</span>
               </div>
               
-              <div class="glass-card rounded-2xl p-5 sm:p-6 border-primary/40 bg-primary/5 shadow-xl max-w-3xl relative overflow-hidden">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-5 sm:p-6 border-primary/40 bg-primary/5 shadow-xl max-w-3xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
                 
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-4 relative z-10">
@@ -321,7 +319,7 @@ export function About() {
               <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-white/20 flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-outline text-base">tour</span>
               </div>
-              <div class="glass-card rounded-2xl p-5 border-white/10 hover:border-primary/20 transition-colors max-w-3xl">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-primary/20 transition-colors max-w-3xl">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <div class="flex items-center gap-2.5">
                     <span class="text-2xl font-black text-outline tracking-tight">2027 - 2030</span>
