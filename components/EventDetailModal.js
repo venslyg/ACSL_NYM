@@ -10,8 +10,8 @@ export function EventDetailModal() {
           <div class="absolute inset-0 bg-gradient-to-t from-surface-container/95 via-surface-container/40 to-transparent"></div>
           
           <!-- Official Event Logo -->
-          <div class="absolute inset-0 flex items-center justify-center z-10 p-6 pointer-events-none">
-            <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-20 sm:h-28 md:h-36 object-contain opacity-80 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"/>
+          <div class="absolute top-4 left-4 md:inset-0 md:flex md:items-center md:justify-center z-10 pointer-events-none">
+            <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-16 sm:h-20 md:h-28 object-contain opacity-80 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"/>
           </div>
           
           <!-- Close Button -->
