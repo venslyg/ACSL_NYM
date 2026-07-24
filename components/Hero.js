@@ -12,7 +12,7 @@ export function Hero() {
           <span class="font-label-md text-[10px] sm:text-xs text-primary uppercase tracking-widest truncate">Apostolic Church's Youth Spiritual Awakening</span>
         </div>
         
-        <h1 class="font-headline-lg text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        <h1 class="font-display-lg text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
           EMPOWERING THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-fixed">NEXT GENERATION</span> OF FAITH.
         </h1>
         
