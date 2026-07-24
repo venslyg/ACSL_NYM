@@ -67,12 +67,12 @@ tailwind.config = {
       "fontFamily": {
               "headline-md": ["Sora"],
               "display-lg": ["Anton", "Sora"],
-              "headline-lg-mobile": ["Anton", "Sora"],
+              "headline-lg-mobile": ["Sora", "sans-serif"],
               "body-md": ["Hanken Grotesk"],
               "label-md": ["Montserrat", "sans-serif"],
               "body-lg": ["Hanken Grotesk"],
               "display-lg-mobile": ["Anton", "Sora"],
-              "headline-lg": ["Anton", "Sora"]
+              "headline-lg": ["Sora", "sans-serif"]
       },
       "fontSize": {
               "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],

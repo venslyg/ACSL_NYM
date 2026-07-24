@@ -51,7 +51,7 @@ export const pastEvents = [
     date: "2026",
     location: "Colombo, Sri Lanka",
     image: "assets/images/event-tech.jpg",
-    badge: "Colombo Regional"
+    badge: "Colombo Regional Camp"
   },
   {
     id: "jaffna-regional-camp",
@@ -60,7 +60,7 @@ export const pastEvents = [
     date: "2026",
     location: "Jaffna, Sri Lanka",
     image: "assets/images/event-rooftop.jpg",
-    badge: "Jaffna Regional"
+    badge: "Jaffna Regional Camp"
   },
   {
     id: "wennappuwa-regional-camp",
@@ -69,6 +69,6 @@ export const pastEvents = [
     date: "2026",
     location: "Wennappuwa, Sri Lanka",
     image: "assets/images/event-sports.jpg",
-    badge: "Wennappuwa Regional"
+    badge: "Wennappuwa Regional Camp"
   }
 ];
