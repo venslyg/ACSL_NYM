@@ -67,6 +67,12 @@ export function UpcomingEvents() {
                 <span class="block mt-1 font-bold text-secondary font-label-md not-italic text-[10px] sm:text-xs uppercase tracking-wider">- John 14:12</span>
               </div>
               
+              <!-- Registration Deadline -->
+              <div class="border-l-2 border-tertiary pl-4 py-2 mb-6 sm:mb-8 bg-tertiary/10 rounded-r-lg px-4">
+                <p class="font-body-md text-[10px] text-outline uppercase tracking-wider mb-1">Registration Deadline</p>
+                <p class="font-headline-md text-sm sm:text-base font-bold text-tertiary">August 15, 2026</p>
+              </div>
+              
               <!-- Countdown Timer -->
               <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8 max-w-md">
                 <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 sm:p-3 text-center">

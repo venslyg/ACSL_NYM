@@ -120,6 +120,14 @@ export function EventDetailModal() {
                     <p id="modal-speakers" class="font-body-md text-xs sm:text-sm font-bold text-on-surface"></p>
                   </div>
                 </div>
+
+                <div class="flex items-center gap-3 bg-tertiary/15 rounded-lg p-3 border-l-2 border-tertiary">
+                  <span class="material-symbols-outlined text-tertiary text-xl">schedule</span>
+                  <div>
+                    <p class="font-body-md text-[10px] text-outline uppercase tracking-wider">Registration Deadline</p>
+                    <p class="font-body-md text-xs sm:text-sm font-bold text-tertiary">August 15, 2026</p>
+                  </div>
+                </div>
               </div>
 
               <!-- Packing list -->
