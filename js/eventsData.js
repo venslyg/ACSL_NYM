@@ -38,7 +38,7 @@ export const upcomingEvents = [
       { item: "Bible & Notebook", detail: "Essential for all spiritual sessions." },
       { item: "Camp Clothing", detail: "Comfortable clothes and footwear for 4 days." },
       { item: "Personal Hygiene Items", detail: "Towel, toiletries, and bed sheets." },
-      { item: "Camp Fee", detail: "LKR 6,000 per person." }
+      { item: "Camp Fee", detail: "LKR 6,000 per person. Pay LKR 2,000 upon registration and the balance LKR 4,000 at the camp's registration desk." }
     ]
   }
 ];
