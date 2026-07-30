@@ -119,9 +119,91 @@ export function UpcomingEvents() {
             <p class="font-body-md text-xs sm:text-sm text-on-surface-variant">Three major regional camps conducted across Sri Lanka leading up to the national summit.</p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            ${pastEvents.map(event => `
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+            ${pastEvents.filter(e => e.date === '2026').map(event => `
               <a href="#memories?camp=${event.id}" class="glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10 hover:border-primary/40">
+                <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
+                  <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                  <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
+                    <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
+                  </div>
+                  <!-- Overlay for memories -->
+                  <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-surface/90 border border-primary/30 text-primary font-label-md text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
+                      <span class="material-symbols-outlined text-sm">photo_library</span>
+                      View Memories
+                    </span>
+                  </div>
+                </div>
+                
+                <h4 class="font-headline-md text-lg sm:text-xl mb-2 sm:mb-3 text-secondary group-hover:text-primary transition-colors duration-300">${event.title}</h4>
+                <p class="font-body-md text-xs sm:text-sm text-on-surface-variant mb-5 line-clamp-3 leading-relaxed">${event.description}</p>
+                
+                <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-xs text-on-surface-variant font-label-md">
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                    ${event.location}
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-outline">${event.date}</span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Past Milestones Section (2024 - 2025) -->
+        <div class="pt-8 border-t border-white/10 mt-16 sm:mt-20 font-sans">
+          <div class="mb-10 sm:mb-12">
+            <div class="relative inline-block mb-3">
+              <span class="font-label-md text-tertiary tracking-[0.2em] uppercase text-xs sm:text-sm">Previous Camps Milestones</span>
+              <div class="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-tertiary to-transparent"></div>
+            </div>
+            <h3 class="font-headline-lg text-xl sm:text-2xl md:text-3xl font-bold mb-2">Previous Camps (2024 - 2025)</h3>
+            <p class="font-body-md text-xs sm:text-sm text-on-surface-variant">Key youth and leadership camps conducted in 2024 and 2025.</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-stretch justify-center gap-8 lg:max-w-4xl mx-auto">
+            <!-- 2025 Camp -->
+            ${pastEvents.filter(e => e.date === '2025').map(event => `
+              <a href="#memories?camp=${event.id}" class="flex-1 glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10 hover:border-primary/40">
+                <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
+                  <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                  <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
+                    <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
+                  </div>
+                  <!-- Overlay for memories -->
+                  <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-surface/90 border border-primary/30 text-primary font-label-md text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
+                      <span class="material-symbols-outlined text-sm">photo_library</span>
+                      View Memories
+                    </span>
+                  </div>
+                </div>
+                
+                <h4 class="font-headline-md text-lg sm:text-xl mb-2 sm:mb-3 text-secondary group-hover:text-primary transition-colors duration-300">${event.title}</h4>
+                <p class="font-body-md text-xs sm:text-sm text-on-surface-variant mb-5 line-clamp-3 leading-relaxed">${event.description}</p>
+                
+                <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-xs text-on-surface-variant font-label-md">
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                    ${event.location}
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-outline">${event.date}</span>
+                </div>
+              </a>
+            `).join('')}
+
+            <!-- Visual Divider -->
+            <div class="hidden md:flex items-center justify-center py-4">
+              <div class="w-px h-full min-h-[250px] bg-gradient-to-b from-transparent via-white/10 to-transparent"></div>
+            </div>
+            <div class="flex md:hidden items-center justify-center py-2">
+              <div class="w-2/3 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+            </div>
+
+            <!-- 2024 Camp -->
+            ${pastEvents.filter(e => e.date === '2024').map(event => `
+              <a href="#memories?camp=${event.id}" class="flex-1 glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10 hover:border-primary/40">
                 <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
                   <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">

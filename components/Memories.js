@@ -34,7 +34,7 @@ export function Memories(campId) {
             ${camp.title}
           </h1>
           <p class="font-body-md text-xs sm:text-sm md:text-base text-on-surface-variant max-w-2xl mt-4 leading-relaxed">
-            Relive the inspiring moments of prayer, worship, fellowship and spiritual growth. Photos load directly from Cloudinary.
+            Relive the inspiring moments of prayer, worship, fellowship and spiritual growth.
           </p>
         </div>
       </div>
@@ -150,45 +150,22 @@ export function initMemories(campId) {
   function renderEmptyState() {
     if (!galleryContainer) return;
     galleryContainer.innerHTML = `
-      <div class="glass-card rounded-2xl p-10 sm:p-12 text-center border-white/10 max-w-md mx-auto">
-        <span class="material-symbols-outlined text-outline text-5xl mb-4">photo_library</span>
-        <h3 class="font-headline-md text-lg text-white font-bold mb-2">No photos found</h3>
-        <p class="font-body-md text-on-surface-variant text-sm sm:text-base">Photos for this camp haven't been tagged in Cloudinary yet. Tag your photos with <strong>"${tag}"</strong> in Cloudinary to show them here.</p>
+      <div class="glass-card rounded-2xl p-10 sm:p-12 text-center border-white/10 max-w-md mx-auto flex flex-col items-center justify-center gap-4 animate-fade-in">
+        <span class="material-symbols-outlined text-outline text-5xl">photo_library</span>
+        <h3 class="font-headline-md text-lg text-white font-bold">No Memories to Display Yet</h3>
+        <p class="font-body-md text-on-surface-variant text-sm sm:text-base leading-relaxed">
+          Photos and highlights from this camp are currently being prepared. Please check back soon to relive these inspiring moments!
+        </p>
+        <a href="#events" class="mt-2 px-6 py-2.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-label-md uppercase tracking-wider hover:bg-primary/30 transition-all text-center">
+          Back to Events
+        </a>
       </div>
     `;
   }
 
   function renderErrorState(tag, cloudName) {
-    if (!galleryContainer) return;
-    galleryContainer.innerHTML = `
-      <div class="glass-card rounded-2xl p-6 sm:p-8 border-white/10 max-w-xl mx-auto flex flex-col gap-4 text-left">
-        <div class="flex items-center gap-3 text-warning">
-          <span class="material-symbols-outlined text-3xl animate-pulse">warning</span>
-          <h3 class="font-headline-md text-lg text-white font-bold">Cloudinary Access Restricted</h3>
-        </div>
-        
-        <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-          The website tried to fetch the photo list from Cloudinary under the tag <strong>"${tag}"</strong>, but the request was blocked. This happens because Cloudinary restricts public list access by default.
-        </p>
-
-        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-2">
-          <h4 class="font-label-md text-xs text-primary uppercase tracking-wide font-bold">How to unlock this (One-time Setup):</h4>
-          <ol class="list-decimal pl-4 text-xs text-on-surface-variant space-y-2.5 leading-relaxed">
-            <li>Log into your <strong>Cloudinary Management Console</strong>.</li>
-            <li>Click the <strong>Settings (Gear Icon)</strong> in the bottom-left corner.</li>
-            <li>Select <strong>Security</strong> from the settings menu.</li>
-            <li>Scroll down to the <strong>Restricted media types</strong> section.</li>
-            <li><strong>Uncheck</strong> the checkbox next to <strong>Resource list</strong>.</li>
-            <li>Click <strong>Save</strong> at the bottom.</li>
-            <li>Ensure you upload photos and tag them exactly with: <code class="bg-black/40 px-1.5 py-0.5 rounded text-secondary font-mono">${tag}</code></li>
-          </ol>
-        </div>
-
-        <button onclick="window.location.reload()" class="w-full sm:w-max px-6 py-2.5 rounded-full bg-primary text-white text-xs font-label-md uppercase tracking-wider hover:bg-opacity-90 transition-all text-center self-center sm:self-start cursor-pointer">
-          Retry Connection
-        </button>
-      </div>
-    `;
+    // Fall back 
+    renderEmptyState();
   }
 
   function setupLightbox(photos) {

@@ -74,5 +74,25 @@ export const pastEvents = [
     image: "assets/images/event-sports.jpg",
     badge: "Wennappuwa Regional Camp",
     cloudinaryTag: "wennappuwa-camp"
+  },
+  {
+    id: "level-up-camp-2025",
+    title: "LEVEL UP – Youth Camp 2025",
+    description: "The 2025 youth camp designed to raise the standard of spiritual capacity, leadership, and peer discipleship among the generation.",
+    date: "2025",
+    location: "Arachchikattuwa, Sri Lanka",
+    image: "assets/images/event-camp.jpg",
+    badge: "Youth Camp",
+    cloudinaryTag: "level-up-2025"
+  },
+  {
+    id: "empower-camp-2024",
+    title: "EMPOWER – Leadership Camp 2024",
+    description: "The foundational 2024 leadership gathering activating spiritual gifts, youth empowerment, and unity across regional churches.",
+    date: "2024",
+    location: "Naththandiya, Sri Lanka",
+    image: "assets/images/event-tech.jpg",
+    badge: "Leadership Camp",
+    cloudinaryTag: "empower-2024"
   }
 ];
