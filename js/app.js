@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ${Navbar()}
     <main class="relative pt-12">
       ${Hero()}
-      ${About()}
       ${UpcomingEvents()}
+      ${About()}
     </main>
     ${EventDetailModal()}
     ${Footer()}

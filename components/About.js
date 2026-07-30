@@ -51,6 +51,26 @@ export function About() {
 
       </div>
 
+      <!-- Introduction to the Apostolic Church of Sri Lanka -->
+      <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl mb-16">
+        <div class="flex items-center gap-4 mb-6">
+          <img src="assets/images/ACSL logo.jpg" alt="ACSL Logo" class="w-12 h-12 object-contain rounded-xl border border-primary/30 shadow-lg"/>
+          <div>
+            <span class="font-label-md text-xs text-primary uppercase tracking-widest">National Church Movement</span>
+            <h3 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold">The Apostolic Church of Sri Lanka</h3>
+          </div>
+        </div>
+        
+        <div class="space-y-4 font-body-lg text-on-surface-variant leading-relaxed">
+          <p>
+            The <strong class="text-on-surface">Apostolic Church of Sri Lanka</strong> is a spirit-filled church movement established across the nation, dedicated to preaching the uncompromised Gospel of Jesus Christ, planting vibrant churches, and discipling generations.
+          </p>
+          <p>
+            Through the <strong class="text-primary">ACSL National Youth Ministry</strong>, we unite youth from all regions of Sri Lanka—including Colombo, Jaffna, Wennappuwa, Madampe, and surrounding districts. Our passion is to raise up an empowered generation that stands firm in prayer, worships in truth, and transforms society through God's love.
+          </p>
+        </div>
+      </div>
+
       <!-- Vision 2030 Strategic Roadmap Section -->
       <div class="mb-16 border-t border-white/10 pt-16">
         <div class="mb-12 text-center md:text-left">
@@ -340,26 +360,6 @@ export function About() {
           </div>
         </div>
 
-      </div>
-
-      <!-- Introduction to the Apostolic Church of Sri Lanka -->
-      <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl">
-        <div class="flex items-center gap-4 mb-6">
-          <img src="assets/images/ACSL logo.jpg" alt="ACSL Logo" class="w-12 h-12 object-contain rounded-xl border border-primary/30 shadow-lg"/>
-          <div>
-            <span class="font-label-md text-xs text-primary uppercase tracking-widest">National Church Movement</span>
-            <h3 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold">The Apostolic Church of Sri Lanka</h3>
-          </div>
-        </div>
-        
-        <div class="space-y-4 font-body-lg text-on-surface-variant leading-relaxed">
-          <p>
-            The <strong class="text-on-surface">Apostolic Church of Sri Lanka</strong> is a spirit-filled church movement established across the nation, dedicated to preaching the uncompromised Gospel of Jesus Christ, planting vibrant churches, and discipling generations.
-          </p>
-          <p>
-            Through the <strong class="text-primary">ACSL National Youth Ministry</strong>, we unite youth from all regions of Sri Lanka—including Colombo, Jaffna, Wennappuwa, Madampe, and surrounding districts. Our passion is to raise up an empowered generation that stands firm in prayer, worships in truth, and transforms society through God's love.
-          </p>
-        </div>
       </div>
 
     </section>
