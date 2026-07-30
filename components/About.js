@@ -18,7 +18,7 @@ export function About() {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         
         <!-- Vision Card -->
-        <div class="glass-card scroll-zoom-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
+        <div class="glass-card scroll-zoom-card rounded-2xl p-5 sm:p-8 md:p-12 relative overflow-hidden group border-primary/20">
           <div class="relative z-10">
             <div class="w-14 h-14 rounded-xl bg-secondary-container/10 border border-secondary-container/30 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
@@ -34,7 +34,7 @@ export function About() {
         </div>
 
         <!-- Mission Card -->
-        <div class="glass-card scroll-zoom-card rounded-2xl p-8 md:p-12 relative overflow-hidden group border-primary/20">
+        <div class="glass-card scroll-zoom-card rounded-2xl p-5 sm:p-8 md:p-12 relative overflow-hidden group border-primary/20">
           <div class="relative z-10">
             <div class="w-14 h-14 rounded-xl bg-tertiary/10 border border-tertiary/30 flex items-center justify-center mb-6">
               <span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
@@ -52,12 +52,12 @@ export function About() {
       </div>
 
       <!-- Introduction to the Apostolic Church of Sri Lanka -->
-      <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl mb-16">
-        <div class="flex items-center gap-4 mb-6">
-          <img src="assets/images/ACSL logo.jpg" alt="ACSL Logo" class="w-12 h-12 object-contain rounded-xl border border-primary/30 shadow-lg"/>
+      <div class="glass-card rounded-3xl p-5 sm:p-8 md:p-12 relative overflow-hidden border-white/10 shadow-2xl mb-16">
+        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <img src="assets/images/ACSL logo.jpg" alt="ACSL Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-xl border border-primary/30 shadow-lg"/>
           <div>
-            <span class="font-label-md text-xs text-primary uppercase tracking-widest">National Church Movement</span>
-            <h3 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold">The Apostolic Church of Sri Lanka</h3>
+            <span class="font-label-md text-[10px] sm:text-xs text-primary uppercase tracking-widest">National Church Movement</span>
+            <h3 class="font-headline-lg text-xl sm:text-2xl md:text-3xl text-primary font-bold">The Apostolic Church of Sri Lanka</h3>
           </div>
         </div>
         
@@ -124,20 +124,20 @@ export function About() {
                 <span class="material-symbols-outlined">groups</span>
                 Areas of Youth Ministry
               </h3>
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="bg-white/5 border border-white/5 p-3 rounded-xl">
+              <div class="grid grid-cols-2 gap-2.5 sm:gap-4 mb-6">
+                <div class="bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
                   <p class="text-xs font-bold text-secondary mb-1">Spiritual Growth</p>
                   <p class="text-[10px] text-outline">Discipleship & word study</p>
                 </div>
-                <div class="bg-white/5 border border-white/5 p-3 rounded-xl">
+                <div class="bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
                   <p class="text-xs font-bold text-secondary mb-1">Worship & Prayer</p>
                   <p class="text-[10px] text-outline">National prayer movement</p>
                 </div>
-                <div class="bg-white/5 border border-white/5 p-3 rounded-xl">
+                <div class="bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
                   <p class="text-xs font-bold text-secondary mb-1">Leadership</p>
                   <p class="text-[10px] text-outline">Trained leadership teams</p>
                 </div>
-                <div class="bg-white/5 border border-white/5 p-3 rounded-xl">
+                <div class="bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
                   <p class="text-xs font-bold text-secondary mb-1">Evangelism</p>
                   <p class="text-[10px] text-outline">Outreach across communities</p>
                 </div>
@@ -158,44 +158,44 @@ export function About() {
             <span class="material-symbols-outlined">hub</span>
             National Youth Teams (To Be Built)
           </h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">music_note</span>
               <span class="text-xs font-medium">Worship Team</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">church</span>
               <span class="text-xs font-medium">Prayer Team</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">photo_camera</span>
               <span class="text-xs font-medium">Media & Photo</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">terminal</span>
               <span class="text-xs font-medium">IT & Technical</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">palette</span>
               <span class="text-xs font-medium">Design & Creative</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">medical_services</span>
               <span class="text-xs font-medium">Medical & Support</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">campaign</span>
               <span class="text-xs font-medium">Evangelism Team</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">event</span>
               <span class="text-xs font-medium">Event Coordination</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">sports_soccer</span>
               <span class="text-xs font-medium">Sports Ministry</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-3 rounded-xl">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/5 p-2.5 sm:p-3 rounded-xl">
               <span class="material-symbols-outlined text-primary text-base">menu_book</span>
               <span class="text-xs font-medium">Discipleship Ministry</span>
             </div>
@@ -213,12 +213,12 @@ export function About() {
           </h3>
 
           <!-- Visual Timeline Path -->
-          <div class="relative z-10 ml-2 sm:ml-6 pl-6 sm:pl-8 border-l-2 border-dashed border-white/10 space-y-12">
+          <div class="relative z-10 ml-1 sm:ml-6 pl-4 sm:pl-8 border-l-2 border-dashed border-white/10 space-y-12">
             
             <!-- 2024 Milestone -->
             <div class="relative">
               <!-- Pin dot -->
-              <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
+              <div class="absolute -left-[25px] sm:-left-[43px] top-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-secondary text-base">check</span>
               </div>
               <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
@@ -238,7 +238,7 @@ export function About() {
             <!-- 2025 Milestone -->
             <div class="relative">
               <!-- Pin dot -->
-              <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
+              <div class="absolute -left-[25px] sm:-left-[43px] top-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-surface border-2 border-secondary flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-secondary text-base">groups</span>
               </div>
               <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-secondary/40 transition-colors max-w-3xl">
@@ -264,7 +264,7 @@ export function About() {
             <!-- 2026 Milestone (Active / Winding path) -->
             <div class="relative">
               <!-- Animated current pin dot -->
-              <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-primary border-2 border-white flex items-center justify-center shadow-[0_0_15px_#568dff] animate-pulse z-10">
+              <div class="absolute -left-[25px] sm:-left-[43px] top-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary border-2 border-white flex items-center justify-center shadow-[0_0_15px_#568dff] animate-pulse z-10">
                 <span class="material-symbols-outlined text-white text-base">navigation</span>
               </div>
               
@@ -284,10 +284,10 @@ export function About() {
                 </p>
 
                 <!-- Sub-timeline Winding Path for 2026 -->
-                <div class="space-y-4 border-l border-primary/20 pl-4 ml-2">
+                <div class="space-y-4 border-l border-primary/20 pl-3 sm:pl-4 ml-1 sm:ml-2">
                   <!-- Step 1 -->
                   <div class="relative">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
+                    <div class="absolute -left-[17px] sm:-left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
                     <div class="flex items-center gap-2 text-xs mb-1">
                       <span class="font-bold text-secondary uppercase tracking-wider">March</span>
                       <span class="text-outline">|</span>
@@ -298,7 +298,7 @@ export function About() {
                   
                   <!-- Step 2 -->
                   <div class="relative">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
+                    <div class="absolute -left-[17px] sm:-left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
                     <div class="flex items-center gap-2 text-xs mb-1">
                       <span class="font-bold text-secondary uppercase tracking-wider">May</span>
                       <span class="text-outline">|</span>
@@ -309,7 +309,7 @@ export function About() {
                   
                   <!-- Step 3 -->
                   <div class="relative">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
+                    <div class="absolute -left-[17px] sm:-left-[21px] top-1.5 w-2 h-2 rounded-full bg-secondary"></div>
                     <div class="flex items-center gap-2 text-xs mb-1">
                       <span class="font-bold text-secondary uppercase tracking-wider">June - July</span>
                       <span class="text-outline">|</span>
@@ -319,8 +319,8 @@ export function About() {
                   </div>
 
                   <!-- Step 4 -->
-                  <div class="relative bg-primary/10 border border-primary/20 rounded-xl p-3.5 mt-2">
-                    <div class="absolute -left-[21px] top-4 w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#568dff]"></div>
+                  <div class="relative bg-primary/10 border border-primary/20 rounded-xl p-2.5 sm:p-3.5 mt-2">
+                    <div class="absolute -left-[17px] sm:-left-[21px] top-4 w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#568dff]"></div>
                     <div class="flex items-center gap-2 text-xs mb-1">
                       <span class="font-bold text-primary uppercase tracking-wider">August 2026</span>
                       <span class="text-outline">|</span>
@@ -336,7 +336,7 @@ export function About() {
             <!-- 2027-2030 Milestone -->
             <div class="relative">
               <!-- Pin dot -->
-              <div class="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-surface border-2 border-white/20 flex items-center justify-center shadow-lg">
+              <div class="absolute -left-[25px] sm:-left-[43px] top-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-surface border-2 border-white/20 flex items-center justify-center shadow-lg">
                 <span class="material-symbols-outlined text-outline text-base">tour</span>
               </div>
               <div class="glass-card scroll-zoom-card rounded-2xl p-5 border-white/10 hover:border-primary/20 transition-colors max-w-3xl">

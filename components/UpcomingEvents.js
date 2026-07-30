@@ -74,20 +74,20 @@ export function UpcomingEvents() {
               </div>
               
               <!-- Countdown Timer -->
-              <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8 max-w-md">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 sm:p-3 text-center">
+              <div class="grid grid-cols-4 gap-1.5 sm:gap-3 mb-6 sm:mb-8 max-w-md">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-1.5 sm:p-3 text-center">
                   <div class="font-headline-md text-lg sm:text-2xl text-primary font-bold" id="days">35</div>
                   <div class="font-label-md text-[8px] sm:text-[9px] opacity-50 uppercase tracking-widest">Days</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 sm:p-3 text-center">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-1.5 sm:p-3 text-center">
                   <div class="font-headline-md text-lg sm:text-2xl text-primary font-bold" id="hours">14</div>
                   <div class="font-label-md text-[8px] sm:text-[9px] opacity-50 uppercase tracking-widest">Hrs</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 sm:p-3 text-center">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-1.5 sm:p-3 text-center">
                   <div class="font-headline-md text-lg sm:text-2xl text-primary font-bold" id="minutes">20</div>
                   <div class="font-label-md text-[8px] sm:text-[9px] opacity-50 uppercase tracking-widest">Min</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 sm:p-3 text-center">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-1.5 sm:p-3 text-center">
                   <div class="font-headline-md text-lg sm:text-2xl text-primary font-bold" id="seconds">45</div>
                   <div class="font-label-md text-[8px] sm:text-[9px] opacity-50 uppercase tracking-widest">Sec</div>
                 </div>
@@ -121,7 +121,7 @@ export function UpcomingEvents() {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             ${pastEvents.map(event => `
-              <div class="glass-card scroll-zoom-card rounded-2xl p-5 sm:p-6 flex flex-col group transition-all duration-300 border-white/10">
+              <div class="glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10">
                 <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
                   <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg">

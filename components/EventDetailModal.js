@@ -5,32 +5,32 @@ export function EventDetailModal() {
       <div class="relative w-full max-w-4xl glass-card bg-surface-container/70 backdrop-blur-2xl border border-white/15 rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
         
         <!-- Header Image & Close -->
-        <div class="relative h-[200px] sm:h-[260px] md:h-[320px] overflow-hidden flex-shrink-0">
+        <div class="relative h-[150px] sm:h-[260px] md:h-[320px] overflow-hidden flex-shrink-0">
           <img id="modal-image" class="w-full h-full object-cover" src=""/>
           <div class="absolute inset-0 bg-gradient-to-t from-surface-container/95 via-surface-container/40 to-transparent"></div>
           
           <!-- Official Event Logo -->
-          <div class="absolute top-4 left-4 md:inset-0 md:flex md:items-center md:justify-center z-10 pointer-events-none">
-            <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-16 sm:h-20 md:h-28 object-contain opacity-80 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"/>
+          <div class="absolute top-3 left-3 md:inset-0 md:flex md:items-center md:justify-center z-10 pointer-events-none">
+            <img src="assets/images/event logo.png" alt="Faith in Action Logo" class="w-auto h-14 sm:h-20 md:h-28 object-contain opacity-80 filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"/>
           </div>
           
           <!-- Close Button -->
-          <button id="modal-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-surface-container/70 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-surface-container transition-all cursor-pointer text-primary z-20">
-            <span class="material-symbols-outlined text-xl sm:text-2xl">close</span>
+          <button id="modal-close" class="absolute top-3 right-3 sm:top-6 sm:right-6 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-surface-container/70 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-surface-container transition-all cursor-pointer text-primary z-20">
+            <span class="material-symbols-outlined text-lg sm:text-2xl">close</span>
           </button>
 
           <!-- Badges & Title -->
-          <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-8 sm:right-8 z-10">
-            <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <span id="modal-badge" class="inline-block px-3 py-1 rounded-full bg-primary-container/20 border border-primary/30 text-primary font-label-md text-[10px] sm:text-xs uppercase tracking-wider">National Youth Camp</span>
-              <span id="modal-fee" class="inline-block px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary font-label-md text-[10px] sm:text-xs uppercase tracking-wider">LKR 6,000 / person</span>
+          <div class="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-8 sm:right-8 z-10">
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-3 mb-1.5 sm:mb-3">
+              <span id="modal-badge" class="inline-block px-2.5 py-0.5 rounded-full bg-primary-container/20 border border-primary/30 text-primary font-label-md text-[9px] sm:text-xs uppercase tracking-wider">National Youth Camp</span>
+              <span id="modal-fee" class="inline-block px-2.5 py-0.5 rounded-full bg-secondary-container/20 border border-secondary-container/30 text-secondary font-label-md text-[9px] sm:text-xs uppercase tracking-wider">LKR 6,000 / person</span>
             </div>
-            <h2 id="modal-title" class="font-headline-lg text-secondary text-xl sm:text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md"></h2>
+            <h2 id="modal-title" class="font-headline-lg text-secondary text-lg sm:text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md"></h2>
           </div>
         </div>
 
         <!-- Scrollable content area -->
-        <div class="overflow-y-auto no-scrollbar p-5 sm:p-8 md:p-10 flex-grow">
+        <div class="overflow-y-auto no-scrollbar p-4 sm:p-8 md:p-10 flex-grow">
           <!-- Description & Logistics Grid -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-6">
             <!-- Left Info column -->
@@ -38,7 +38,7 @@ export function EventDetailModal() {
               <p id="modal-desc" class="font-body-lg text-sm sm:text-base text-on-surface-variant leading-relaxed"></p>
               
               <!-- Payment Instructions Card -->
-              <div class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 space-y-4 md:flex-grow">
+              <div class="glass-card p-4 sm:p-6 rounded-2xl border-white/10 space-y-4 md:flex-grow">
                 <div class="flex items-center gap-2 text-primary">
                   <span class="material-symbols-outlined">payments</span>
                   <h3 class="font-headline-md text-xs sm:text-sm font-bold uppercase tracking-widest">Payment Instructions</h3>
@@ -86,7 +86,7 @@ export function EventDetailModal() {
             <!-- Right Logistics column -->
             <div class="md:col-span-5 md:flex md:flex-col space-y-6">
               <!-- Logistics Card -->
-              <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4 border-white/10">
+              <div class="glass-card p-4 sm:p-6 rounded-2xl space-y-4 border-white/10">
                 <h4 class="font-label-md text-secondary uppercase tracking-widest text-xs">Camp Details</h4>
                 
                 <div class="flex items-center gap-3">
@@ -131,7 +131,7 @@ export function EventDetailModal() {
               </div>
 
               <!-- Packing list -->
-              <div id="modal-major-packing" class="glass-card p-5 sm:p-6 rounded-2xl border-white/10 md:flex-grow">
+              <div id="modal-major-packing" class="glass-card p-4 sm:p-6 rounded-2xl border-white/10 md:flex-grow">
                 <h3 class="font-headline-md text-xs sm:text-sm text-primary mb-4 flex items-center gap-2 uppercase tracking-widest font-bold">
                   <span class="material-symbols-outlined text-base">inventory_2</span>
                   WHAT TO BRING
@@ -146,7 +146,7 @@ export function EventDetailModal() {
         </div>
 
         <!-- Footer Action -->
-        <div class="bg-surface-container-low/60 backdrop-blur-md border-t border-white/10 px-5 sm:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 flex-shrink-0">
+        <div class="bg-surface-container-low/60 backdrop-blur-md border-t border-white/10 px-4 sm:px-8 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4 flex-shrink-0">
           <div class="text-center sm:text-left">
             <p class="text-[10px] sm:text-xs text-outline font-label-md uppercase tracking-widest">Apostolic Church of Sri Lanka</p>
             <p class="text-xs sm:text-sm font-body-md text-on-surface-variant">Secure your delegate registration today via Google Forms.</p>
