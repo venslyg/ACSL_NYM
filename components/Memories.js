@@ -52,31 +52,6 @@ export function Memories(campId) {
         </div>
       </div>
 
-      <!-- Lightbox Modal -->
-      <div id="lightbox" class="fixed inset-0 bg-black/95 z-[200] hidden flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
-        <!-- Close button -->
-        <button id="lightbox-close" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center cursor-pointer transition-all">
-          <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
-        
-        <!-- Navigation Controls -->
-        <button id="lightbox-prev" class="absolute left-4 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center cursor-pointer transition-all select-none">
-          <span class="material-symbols-outlined text-3xl">chevron_left</span>
-        </button>
-        
-        <!-- Main Image -->
-        <div id="lightbox-img-container" class="max-w-full max-h-[80vh] flex items-center justify-center relative p-2">
-          <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300"/>
-        </div>
-        
-        <button id="lightbox-next" class="absolute right-4 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center cursor-pointer transition-all select-none">
-          <span class="material-symbols-outlined text-3xl">chevron_right</span>
-        </button>
-        
-        <!-- Caption / Photo Count -->
-        <div id="lightbox-caption" class="text-on-surface-variant text-xs sm:text-sm mt-4 font-body-md text-center bg-white/5 px-4 py-1.5 rounded-full border border-white/5"></div>
-      </div>
-
     </section>
   `;
 }
@@ -132,19 +107,26 @@ export function initMemories(campId) {
     if (!galleryContainer) return;
 
     galleryContainer.innerHTML = `
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 animate-fade-in">
-        ${photos.map((photo, index) => `
-          <div class="memory-card glass-card rounded-2xl overflow-hidden aspect-[4/3] border-white/10 group relative cursor-pointer shadow-lg hover:scale-[1.02] transition-all duration-300" data-index="${index}">
-            <img src="${photo}" alt="Memory photo ${index + 1}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"/>
-            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span class="material-symbols-outlined text-white text-3xl transform scale-75 group-hover:scale-100 transition-transform duration-300">zoom_in</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:auto-rows-[220px] md:grid-flow-row-dense animate-fade-in">
+        ${photos.map((photo, index) => {
+          let bentoClass = "md:col-span-1 md:row-span-1";
+          const mod = index % 6;
+          if (mod === 0) {
+            bentoClass = "md:col-span-2 md:row-span-2";
+          } else if (mod === 3) {
+            bentoClass = "md:col-span-1 md:row-span-2";
+          } else if (mod === 4) {
+            bentoClass = "md:col-span-2 md:row-span-1";
+          }
+
+          return `
+            <div class="memory-card glass-card rounded-2xl overflow-hidden border-white/10 group relative shadow-lg hover:scale-[1.01] transition-all duration-300 h-[240px] md:h-full ${bentoClass}">
+              <img src="${photo}" alt="Memory photo ${index + 1}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103" loading="lazy"/>
             </div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     `;
-
-    setupLightbox(photos);
   }
 
   function renderEmptyState() {
@@ -166,89 +148,5 @@ export function initMemories(campId) {
   function renderErrorState(tag, cloudName) {
     // Fall back 
     renderEmptyState();
-  }
-
-  function setupLightbox(photos) {
-    const cards = document.querySelectorAll('.memory-card');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const lightboxPrev = document.getElementById('lightbox-prev');
-    const lightboxNext = document.getElementById('lightbox-next');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-
-    let currentIndex = 0;
-
-    function openLightbox(index) {
-      currentIndex = index;
-      updateLightbox();
-      lightbox.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-      setTimeout(() => {
-        lightbox.classList.add('opacity-100');
-        lightbox.classList.remove('opacity-0');
-      }, 10);
-    }
-
-    function closeLightbox() {
-      lightbox.classList.add('opacity-0');
-      lightbox.classList.remove('opacity-100');
-      setTimeout(() => {
-        lightbox.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-      }, 300);
-    }
-
-    function updateLightbox() {
-      if (!lightboxImg) return;
-      lightboxImg.style.opacity = '0';
-      setTimeout(() => {
-        lightboxImg.src = photos[currentIndex];
-        lightboxCaption.innerText = `Image ${currentIndex + 1} of ${photos.length}`;
-        lightboxImg.style.opacity = '1';
-      }, 150);
-    }
-
-    function showNext() {
-      currentIndex = (currentIndex + 1) % photos.length;
-      updateLightbox();
-    }
-
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-      updateLightbox();
-    }
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const idx = parseInt(card.getAttribute('data-index'));
-        openLightbox(idx);
-      });
-    });
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightboxPrev) lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    if (lightboxNext) lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-
-    // Close on backdrop click
-    if (lightbox) {
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.id === 'lightbox-img-container') {
-          closeLightbox();
-        }
-      });
-    }
-
-    // Keyboard Navigation
-    const keyHandler = (e) => {
-      if (lightbox && !lightbox.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
-      }
-    };
-
-    document.addEventListener('keydown', keyHandler);
-    lightbox._keyHandler = keyHandler;
   }
 }
