@@ -13,8 +13,8 @@ export function Navbar() {
       <!-- Centered Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-10 absolute left-1/2 -translate-x-1/2">
         <a id="nav-home" class="text-primary border-b-2 border-primary pb-1 font-body-md cursor-pointer transition-colors" href="#home">Home</a>
-        <a id="nav-about" class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md cursor-pointer" href="#about">About Us</a>
         <a id="nav-events" class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md cursor-pointer" href="#events">Events</a>
+        <a id="nav-about" class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md cursor-pointer" href="#about">About Us</a>
       </div>
       
       <!-- Mobile Menu Toggle -->
@@ -27,8 +27,8 @@ export function Navbar() {
       <!-- Mobile Navigation Drawer -->
       <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-2xl border-b border-white/10 py-6 flex flex-col items-center space-y-6 shadow-2xl transition-all duration-300 md:hidden">
         <a id="mobile-nav-home" class="text-primary font-body-md text-lg" href="#home">Home</a>
-        <a id="mobile-nav-about" class="text-on-surface-variant hover:text-on-surface font-body-md text-lg" href="#about">About Us</a>
         <a id="mobile-nav-events" class="text-on-surface-variant hover:text-on-surface font-body-md text-lg" href="#events">Events</a>
+        <a id="mobile-nav-about" class="text-on-surface-variant hover:text-on-surface font-body-md text-lg" href="#about">About Us</a>
       </div>
     </nav>
   `;
