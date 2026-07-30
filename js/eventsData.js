@@ -13,6 +13,7 @@ export const upcomingEvents = [
     image: "assets/images/event-camp.jpg",
     speakers: "National Youth Ministry of The Apostolic Church of Sri Lanka",
     enrollLink: "https://forms.gle/WJnq1x1UpzVyCNwH7",
+    cloudinaryTag: "faith-in-action-camp",
     agenda: [
       {
         day: "AUG 26 / DAY 01",
@@ -51,7 +52,8 @@ export const pastEvents = [
     date: "2026",
     location: "Colombo, Sri Lanka",
     image: "assets/images/event-tech.jpg",
-    badge: "Colombo Regional Camp"
+    badge: "Colombo Regional Camp",
+    cloudinaryTag: "colombo-rapha-camp"
   },
   {
     id: "jaffna-regional-camp",
@@ -60,7 +62,8 @@ export const pastEvents = [
     date: "2026",
     location: "Jaffna, Sri Lanka",
     image: "assets/images/event-rooftop.jpg",
-    badge: "Jaffna Regional Camp"
+    badge: "Jaffna Regional Camp",
+    cloudinaryTag: "jaffna-camp"
   },
   {
     id: "wennappuwa-regional-camp",
@@ -69,6 +72,7 @@ export const pastEvents = [
     date: "2026",
     location: "Wennappuwa, Sri Lanka",
     image: "assets/images/event-sports.jpg",
-    badge: "Wennappuwa Regional Camp"
+    badge: "Wennappuwa Regional Camp",
+    cloudinaryTag: "wennappuwa-camp"
   }
 ];

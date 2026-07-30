@@ -4,49 +4,111 @@ import { About } from '../components/About.js';
 import { UpcomingEvents, initUpcomingEvents } from '../components/UpcomingEvents.js';
 import { EventDetailModal, initEventDetailModal } from '../components/EventDetailModal.js';
 import { Footer, initFooter } from '../components/Footer.js';
+import { Memories, initMemories } from '../components/Memories.js';
 import { upcomingEvents } from './eventsData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
   if (!app) return;
 
-  // Render components into the DOM
-  app.innerHTML = `
-    ${Navbar()}
-    <main class="relative pt-12">
-      ${Hero()}
-      ${UpcomingEvents()}
-      ${About()}
-    </main>
-    ${EventDetailModal()}
-    ${Footer()}
-  `;
+  // Initialize Home specific observers and event handlers
+  function initHome() {
+    // Scroll reveal zoom effect for cards
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+    };
 
-  // Initialize interactive features
-  initNavbar();
-  initUpcomingEvents();
-  initEventDetailModal();
-  initFooter();
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
 
-  // Scroll reveal zoom effect for cards
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2
-  };
-
-  const cardObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
+    document.querySelectorAll('.scroll-zoom-card').forEach(card => {
+      cardObserver.observe(card);
     });
-  }, observerOptions);
 
-  document.querySelectorAll('.scroll-zoom-card').forEach(card => {
-    cardObserver.observe(card);
-  });
+    // Hero Faith in Action button listener
+    const heroBtn = document.getElementById('hero-faith-btn');
+    if (heroBtn) {
+      heroBtn.addEventListener('click', () => {
+        const eventsSection = document.getElementById('events');
+        if (eventsSection) {
+          eventsSection.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            const eventDetailEvent = new CustomEvent('open-event-detail', {
+              detail: upcomingEvents[0]
+            });
+            window.dispatchEvent(eventDetailEvent);
+          }, 800);
+        }
+      });
+    }
+  }
+
+  // Routing Handler
+  function handleRoute() {
+    const hash = window.location.hash || '#home';
+
+    if (hash.startsWith('#memories')) {
+      const urlParams = new URLSearchParams(hash.split('?')[1] || '');
+      const campId = urlParams.get('camp');
+
+      app.innerHTML = `
+        ${Navbar()}
+        <main class="relative pt-12">
+          ${Memories(campId)}
+        </main>
+        ${Footer()}
+      `;
+
+      initNavbar();
+      initMemories(campId);
+      initFooter();
+      window.scrollTo(0, 0);
+    } else {
+      // Default Home route
+      app.innerHTML = `
+        ${Navbar()}
+        <main class="relative pt-12">
+          ${Hero()}
+          ${UpcomingEvents()}
+          ${About()}
+        </main>
+        ${EventDetailModal()}
+        ${Footer()}
+      `;
+
+      initNavbar();
+      initUpcomingEvents();
+      initEventDetailModal();
+      initFooter();
+      initHome();
+
+      // If we landed on or navigated to a section hash, scroll to it
+      if (hash && hash !== '#home' && hash.startsWith('#')) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+  }
+
+  // Listen for hash routing updates
+  window.addEventListener('hashchange', handleRoute);
+
+  // Run initial route match
+  handleRoute();
 
   // Bind mousemove tracking for glass-card hover glow effects
   document.addEventListener('mousemove', (e) => {
@@ -66,26 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero Faith in Action button listener
-  const heroBtn = document.getElementById('hero-faith-btn');
-  if (heroBtn) {
-    heroBtn.addEventListener('click', () => {
-      const eventsSection = document.getElementById('events');
-      if (eventsSection) {
-        eventsSection.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => {
-          const eventDetailEvent = new CustomEvent('open-event-detail', {
-            detail: upcomingEvents[0]
-          });
-          window.dispatchEvent(eventDetailEvent);
-        }, 800);
-      }
-    });
-  }
-
   // Active state link highlighters
-  const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    if (sections.length === 0) return;
+
     let currentId = 'home';
     const scrollPos = window.scrollY + 100;
 

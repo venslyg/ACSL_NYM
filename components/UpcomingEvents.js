@@ -121,11 +121,18 @@ export function UpcomingEvents() {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             ${pastEvents.map(event => `
-              <div class="glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10">
+              <a href="#memories?camp=${event.id}" class="glass-card scroll-zoom-card rounded-2xl p-4 sm:p-6 flex flex-col group transition-all duration-300 border-white/10 hover:border-primary/40">
                 <div class="relative h-44 sm:h-48 rounded-xl overflow-hidden mb-5">
                   <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
-                  <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg">
+                  <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
                     <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
+                  </div>
+                  <!-- Overlay for memories -->
+                  <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-surface/90 border border-primary/30 text-primary font-label-md text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
+                      <span class="material-symbols-outlined text-sm">photo_library</span>
+                      View Memories
+                    </span>
                   </div>
                 </div>
                 
@@ -139,7 +146,7 @@ export function UpcomingEvents() {
                   </span>
                   <span class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-outline">${event.date}</span>
                 </div>
-              </div>
+              </a>
             `).join('')}
           </div>
         </div>
