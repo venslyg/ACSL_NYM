@@ -98,8 +98,8 @@ export function initMemories(campId) {
     })
     .then(data => {
       allPhotos = (data.resources || []).map(resource => {
-        // Construct optimized Cloudinary URLs using on-the-fly transformations
-        return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/q_auto,f_auto,w_800/v${resource.version}/${resource.public_id}.${resource.format}`;
+        // Construct optimized Cloudinary URLs using on-the-fly transformations (w_1200, q_auto:best for high quality)
+        return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/q_auto:best,f_auto,w_1200/v${resource.version}/${resource.public_id}.${resource.format}`;
       });
 
       if (allPhotos.length === 0) {
