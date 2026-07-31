@@ -25,10 +25,10 @@ export function Memories(campId) {
             <span class="material-symbols-outlined text-sm">arrow_back</span>
             Back to Events
           </a>
-          <span class="text-white/20 select-none">|</span>
+          <!-- <span class="text-white/20 select-none">|</span>
           <a href="#home" class="flex items-center gap-2 text-primary hover:text-secondary transition-colors w-max font-label-md text-xs uppercase font-bold">
             <span class="material-symbols-outlined text-sm">home</span>
-            Return to Home
+            Return to Home -->
           </a>
         </div>
         
@@ -172,27 +172,27 @@ export function initMemories(campId) {
     galleryContainer.innerHTML = `
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full animate-fade-in">
         ${photos.map((photo, index) => {
-          // Calculate the correct absolute index for the image card
-          const absoluteIndex = (currentPage - 1) * itemsPerPage + index;
-          
-          // Generate sequential bento small tiles pattern
-          let bentoClass = "col-span-1";
-          const mod = absoluteIndex % 12;
-          if (mod === 1 || mod === 5 || mod === 6) {
-            bentoClass = "col-span-1 md:col-span-2";
-          } else if (mod === 4 || mod === 7 || mod === 10) {
-            bentoClass = "col-span-2 md:col-span-1";
-          }
-          if (mod === 10) {
-            bentoClass = "col-span-2 md:col-span-2";
-          }
+      // Calculate the correct absolute index for the image card
+      const absoluteIndex = (currentPage - 1) * itemsPerPage + index;
 
-          return `
+      // Generate sequential bento small tiles pattern
+      let bentoClass = "col-span-1";
+      const mod = absoluteIndex % 12;
+      if (mod === 1 || mod === 5 || mod === 6) {
+        bentoClass = "col-span-1 md:col-span-2";
+      } else if (mod === 4 || mod === 7 || mod === 10) {
+        bentoClass = "col-span-2 md:col-span-1";
+      }
+      if (mod === 10) {
+        bentoClass = "col-span-2 md:col-span-2";
+      }
+
+      return `
             <div class="gallery-image-card glass-card rounded-xl sm:rounded-2xl overflow-hidden border-white/10 group relative shadow-lg hover:scale-[1.01] transition-all duration-300 w-full h-[180px] sm:h-[220px] md:h-[260px] cursor-pointer ${bentoClass}" data-index="${absoluteIndex}">
               <img src="${photo}" alt="Memory photo ${absoluteIndex + 1}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103" loading="lazy"/>
             </div>
           `;
-        }).join('')}
+    }).join('')}
       </div>
       <div id="memories-pagination" class="hidden md:flex items-center justify-center gap-2 mt-12 w-full"></div>
     `;
