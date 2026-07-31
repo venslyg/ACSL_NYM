@@ -127,6 +127,11 @@ export function UpcomingEvents() {
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
                     <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
                   </div>
+                  <!-- Mobile Memories Indicator -->
+                  <div class="absolute bottom-3 right-3 bg-primary/20 backdrop-blur-md border border-primary/30 px-2.5 py-1 rounded-lg z-10 flex items-center gap-1 shadow-lg md:hidden">
+                    <span class="material-symbols-outlined text-[12px] text-primary">photo_library</span>
+                    <span class="font-label-md text-[9px] text-primary uppercase font-bold tracking-wider">Memories</span>
+                  </div>
                   <!-- Overlay for memories -->
                   <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-surface/90 border border-primary/30 text-primary font-label-md text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
@@ -171,6 +176,11 @@ export function UpcomingEvents() {
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
                     <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
                   </div>
+                  <!-- Mobile Memories Indicator -->
+                  <div class="absolute bottom-3 right-3 bg-primary/20 backdrop-blur-md border border-primary/30 px-2.5 py-1 rounded-lg z-10 flex items-center gap-1 shadow-lg md:hidden">
+                    <span class="material-symbols-outlined text-[12px] text-primary">photo_library</span>
+                    <span class="font-label-md text-[9px] text-primary uppercase font-bold tracking-wider">Memories</span>
+                  </div>
                   <!-- Overlay for memories -->
                   <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-surface/90 border border-primary/30 text-primary font-label-md text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
@@ -208,6 +218,11 @@ export function UpcomingEvents() {
                   <img src="${event.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
                   <div class="absolute top-3 left-3 bg-background/80 backdrop-blur-md px-3 py-1 rounded-lg z-10">
                     <span class="font-label-md text-[11px] text-tertiary uppercase">${event.badge}</span>
+                  </div>
+                  <!-- Mobile Memories Indicator -->
+                  <div class="absolute bottom-3 right-3 bg-primary/20 backdrop-blur-md border border-primary/30 px-2.5 py-1 rounded-lg z-10 flex items-center gap-1 shadow-lg md:hidden">
+                    <span class="material-symbols-outlined text-[12px] text-primary">photo_library</span>
+                    <span class="font-label-md text-[9px] text-primary uppercase font-bold tracking-wider">Memories</span>
                   </div>
                   <!-- Overlay for memories -->
                   <div class="absolute inset-0 bg-primary-container/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

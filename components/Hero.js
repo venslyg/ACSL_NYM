@@ -25,7 +25,7 @@ export function Hero() {
             Upcoming Events
             <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
-          <a href="#about" class="w-full sm:w-auto glass-card px-8 py-3.5 sm:py-4 rounded-full font-label-md text-xs sm:text-sm text-on-surface uppercase border border-white/20 hover:bg-white/5 transition-all cursor-pointer text-center">
+          <a href="#about" class="w-full sm:w-auto glass-card px-8 py-3.5 sm:py-4 rounded-full font-label-md text-xs sm:text-sm text-on-surface uppercase border border-white/20 hover:bg-white/5 transition-all cursor-pointer flex items-center justify-center text-center">
             Explore Ministry
           </a>
         </div>
