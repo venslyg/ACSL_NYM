@@ -60,32 +60,6 @@ export function Memories(campId) {
       </div>
 
     </section>
-
-    <!-- Lightbox Modal -->
-    <div id="memories-lightbox" class="fixed inset-0 bg-background/95 backdrop-blur-2xl z-[100] hidden flex-col items-center justify-center select-none opacity-0 transition-opacity duration-300">
-      <!-- Close Button -->
-      <button id="lightbox-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white transition-colors z-[110] w-12 h-12 rounded-full flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-105 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-2xl">close</span>
-      </button>
-
-      <!-- PC Arrow Left -->
-      <button id="lightbox-prev" class="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-[110] w-14 h-14 rounded-full items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-105 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-3xl">chevron_left</span>
-      </button>
-
-      <!-- PC Arrow Right -->
-      <button id="lightbox-next" class="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-[110] w-14 h-14 rounded-full items-center justify-center bg-white/5 border border-white/10 hover:bg-white/10 hover:scale-105 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-3xl">chevron_right</span>
-      </button>
-
-      <!-- Image Wrapper -->
-      <div id="lightbox-wrapper" class="relative w-full max-w-5xl h-full max-h-[80vh] px-4 flex items-center justify-center overflow-hidden">
-        <img id="lightbox-img" src="" alt="Enlarged memory" class="max-w-full max-h-full object-contain rounded-lg sm:rounded-xl shadow-2xl opacity-0 transition-opacity duration-300"/>
-      </div>
-
-      <!-- Counter -->
-      <div id="lightbox-counter" class="absolute bottom-6 font-label-md text-white/50 text-xs sm:text-sm tracking-widest uppercase"></div>
-    </div>
   `;
 }
 
@@ -172,27 +146,12 @@ export function initMemories(campId) {
     galleryContainer.innerHTML = `
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full animate-fade-in">
         ${photos.map((photo, index) => {
-      // Calculate the correct absolute index for the image card
-      const absoluteIndex = (currentPage - 1) * itemsPerPage + index;
-
-      // Generate sequential bento small tiles pattern
-      let bentoClass = "col-span-1";
-      const mod = absoluteIndex % 12;
-      if (mod === 1 || mod === 5 || mod === 6) {
-        bentoClass = "col-span-1 md:col-span-2";
-      } else if (mod === 4 || mod === 7 || mod === 10) {
-        bentoClass = "col-span-2 md:col-span-1";
-      }
-      if (mod === 10) {
-        bentoClass = "col-span-2 md:col-span-2";
-      }
-
-      return `
-            <div class="gallery-image-card glass-card rounded-xl sm:rounded-2xl overflow-hidden border-white/10 group relative shadow-lg hover:scale-[1.01] transition-all duration-300 w-full h-[180px] sm:h-[220px] md:h-[260px] cursor-pointer ${bentoClass}" data-index="${absoluteIndex}">
-              <img src="${photo}" alt="Memory photo ${absoluteIndex + 1}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103" loading="lazy"/>
+          return `
+            <div class="gallery-image-card glass-card rounded-xl sm:rounded-2xl overflow-hidden border-white/10 group relative shadow-lg hover:scale-[1.01] transition-all duration-300 w-full aspect-[4/3] cursor-pointer" data-index="${(currentPage - 1) * itemsPerPage + index}">
+              <img src="${photo}" alt="Memory photo ${index + 1}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103" loading="lazy"/>
             </div>
           `;
-    }).join('')}
+        }).join('')}
       </div>
       <div id="memories-pagination" class="hidden md:flex items-center justify-center gap-2 mt-12 w-full"></div>
     `;
@@ -264,142 +223,7 @@ export function initMemories(campId) {
     });
   }
 
-  // Lightbox Modal Functionality
-  let lightboxCurrentIndex = 0;
-  const lightbox = document.getElementById('memories-lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCounter = document.getElementById('lightbox-counter');
-  const lightboxClose = document.getElementById('lightbox-close');
-  const lightboxPrev = document.getElementById('lightbox-prev');
-  const lightboxNext = document.getElementById('lightbox-next');
 
-  function openLightbox(index) {
-    if (!lightbox || !lightboxImg) return;
-    lightboxCurrentIndex = index;
-    updateLightboxImage();
-    lightbox.classList.remove('hidden');
-    setTimeout(() => {
-      lightbox.classList.remove('opacity-0');
-      lightbox.classList.add('opacity-100');
-    }, 50);
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.classList.remove('opacity-100');
-    lightbox.classList.add('opacity-0');
-    setTimeout(() => {
-      lightbox.classList.add('hidden');
-    }, 300);
-    document.body.style.overflow = '';
-  }
-
-  function updateLightboxImage() {
-    if (!lightboxImg || !lightboxCounter) return;
-    const photoUrl = allPhotos[lightboxCurrentIndex];
-    lightboxImg.classList.add('opacity-0');
-    setTimeout(() => {
-      lightboxImg.src = photoUrl;
-      lightboxImg.onload = () => {
-        lightboxImg.classList.remove('opacity-0');
-      };
-      lightboxCounter.textContent = `${lightboxCurrentIndex + 1} / ${allPhotos.length}`;
-    }, 150);
-  }
-
-  function showNextImage() {
-    if (allPhotos.length === 0) return;
-    lightboxCurrentIndex = (lightboxCurrentIndex + 1) % allPhotos.length;
-    updateLightboxImage();
-  }
-
-  function showPrevImage() {
-    if (allPhotos.length === 0) return;
-    lightboxCurrentIndex = (lightboxCurrentIndex - 1 + allPhotos.length) % allPhotos.length;
-    updateLightboxImage();
-  }
-
-  // Open Lightbox on gallery card click (event delegation)
-  if (galleryContainer) {
-    galleryContainer.addEventListener('click', (e) => {
-      const card = e.target.closest('.gallery-image-card');
-      if (card) {
-        const index = parseInt(card.getAttribute('data-index'), 10);
-        if (!isNaN(index)) {
-          openLightbox(index);
-        }
-      }
-    });
-  }
-
-  // Swipe support for mobile view
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  if (lightbox) {
-    lightbox.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    lightbox.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-  }
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    if (touchEndX < touchStartX - swipeThreshold) {
-      showNextImage();
-    } else if (touchEndX > touchStartX + swipeThreshold) {
-      showPrevImage();
-    }
-  }
-
-  // Lightbox control button actions
-  if (lightboxClose) {
-    lightboxClose.addEventListener('click', closeLightbox);
-  }
-  if (lightboxPrev) {
-    lightboxPrev.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showPrevImage();
-    });
-  }
-  if (lightboxNext) {
-    lightboxNext.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showNextImage();
-    });
-  }
-  if (lightbox) {
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox || e.target.id === 'lightbox-wrapper') {
-        closeLightbox();
-      }
-    });
-  }
-
-  // Keyboard navigation
-  const handleKeyDown = (e) => {
-    if (lightbox && !lightbox.classList.contains('hidden')) {
-      if (e.key === 'ArrowRight') {
-        showNextImage();
-      } else if (e.key === 'ArrowLeft') {
-        showPrevImage();
-      } else if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    }
-  };
-  window.addEventListener('keydown', handleKeyDown);
-
-  // Keydown handler cleanup
-  if (window.currentMemoriesKeydownHandler) {
-    window.removeEventListener('keydown', window.currentMemoriesKeydownHandler);
-  }
-  window.currentMemoriesKeydownHandler = handleKeyDown;
 
   function renderEmptyState() {
     if (!galleryContainer) return;
