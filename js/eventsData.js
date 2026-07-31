@@ -51,7 +51,7 @@ export const pastEvents = [
     description: "The 2026 Colombo regional youth camp centered on divine restoration, spiritual healing, and empowering the urban youth.",
     date: "2026",
     location: "Colombo, Sri Lanka",
-    image: "assets/images/event-tech.jpg",
+    image: "assets/images/raphalogo.jpg",
     badge: "Colombo Regional Camp",
     cloudinaryTag: "colombo-rapha-camp"
   },
@@ -71,7 +71,7 @@ export const pastEvents = [
     description: "A high-octane regional camp activating the youth of Wennappuwa to arise in faith and possess their spiritual inheritance.",
     date: "2026",
     location: "Wennappuwa, Sri Lanka",
-    image: "assets/images/event-sports.jpg",
+    image: "assets/images/A&P_Logo.jpg",
     badge: "Wennappuwa Regional Camp",
     cloudinaryTag: "wennappuwa-camp"
   },
@@ -81,7 +81,7 @@ export const pastEvents = [
     description: "The 2025 youth camp designed to raise the standard of spiritual capacity, leadership, and peer discipleship among the generation.",
     date: "2025",
     location: "Arachchikattuwa, Sri Lanka",
-    image: "assets/images/event-camp.jpg",
+    image: "assets/images/level_upLogo.jpg",
     badge: "Youth Camp",
     cloudinaryTag: "level-up-2025"
   },
@@ -91,7 +91,7 @@ export const pastEvents = [
     description: "The foundational 2024 leadership gathering activating spiritual gifts, youth empowerment, and unity across regional churches.",
     date: "2024",
     location: "Naththandiya, Sri Lanka",
-    image: "assets/images/event-tech.jpg",
+    image: "assets/images/empower_logo.jpg",
     badge: "Leadership Camp",
     cloudinaryTag: "empower-2024"
   }

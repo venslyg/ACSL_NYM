@@ -64,14 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <main class="relative pt-12">
           ${Memories(campId)}
         </main>
-        ${Footer()}
       `;
 
       initNavbar();
       initMemories(campId);
-      initFooter();
       window.scrollTo(0, 0);
     } else {
+      // Clean up memories page resize listener if it exists
+      if (window.currentMemoriesResizeHandler) {
+        window.removeEventListener('resize', window.currentMemoriesResizeHandler);
+        window.currentMemoriesResizeHandler = null;
+      }
+      if (window.currentMemoriesKeydownHandler) {
+        window.removeEventListener('keydown', window.currentMemoriesKeydownHandler);
+        window.currentMemoriesKeydownHandler = null;
+      }
+
       // Default Home route
       app.innerHTML = `
         ${Navbar()}
