@@ -61,7 +61,7 @@ export const pastEvents = [
     description: "A transformative regional gathering bringing together the youth of the Northern province for intense worship and unity.",
     date: "2026",
     location: "Jaffna, Sri Lanka",
-    image: "assets/images/event-rooftop.jpg",
+    image: "assets/images/jaffna_logo.jpg",
     badge: "Jaffna Regional Camp",
     cloudinaryTag: "jaffna-camp"
   },
